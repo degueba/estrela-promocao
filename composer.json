@@ -1,0 +1,13 @@
+{
+  "name": "original_promocao",
+  "version": "0.0.1",
+  "require": {
+    "monolog/monolog": "1.0.*",
+    "klein/klein": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "src\\": "src/"
+    }
+  }
+}
