@@ -11,9 +11,11 @@ class CupomController extends BaseController {
 
     public function index($request, $response, $service)
     {
+        if(!Session::logado()){
+            $this->redirect('/');
+        }
+
         $container = [];
-        $container['retorno']['msg'] = '';
-        $container['retorno']['sucesso'] = true;
         if($request->method() == 'POST'){
             $post = $request->paramsPost();
             if(!empty($post['nome']) && !empty($post['email']) && !empty($post['telefone']) && !empty($post['senha'])){
@@ -38,11 +40,7 @@ class CupomController extends BaseController {
                 $container['retorno']['msg'] = 'Preencha corretamente os campos obrigatórios.';
             }
         }
-        if(Original::isAjax()){
-            $this->json($container);
-        }else{
-            $this->render('cupom', $container);
-        }
+        $this->render('cupom');
     }
 
 

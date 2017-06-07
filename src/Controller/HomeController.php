@@ -25,7 +25,7 @@ class HomeController extends BaseController {
                 $usuario['nome'] = $post['nome'];
                 $usuario['email'] = $post['email'];
                 $usuario['telefone'] = $post['telefone'];
-                $usuario['senha'] = $post['senha'];
+                $usuario['senha'] = md5($post['senha']);
 
                 $usuarioModel = new UsuarioModel();
                 $usuarioId = $usuarioModel->addUsuario($usuario);
@@ -33,6 +33,7 @@ class HomeController extends BaseController {
                     $usuario['id'] = $usuarioId;
                     Session::logar($usuario);
                     $container['retorno']['msg'] = 'Seu cadastro foi efetuado com sucesso!';
+                    $container['retorno']['redirecionar'] = '/cupom';
                 }else{
                     $container['retorno']['sucesso'] = false;
                     $container['retorno']['msg'] = 'Erro ao Cadastrar. Você pode já ser cadastrado, tente recuperar a sua senha.';
@@ -59,25 +60,27 @@ class HomeController extends BaseController {
             if(!empty($post['email']) && !empty($post['senha'])){
                 $usuario = [];
                 $usuario['email'] = $post['email'];
-                $usuario['senha'] = $post['senha'];
+                $usuario['senha'] = md5($post['senha']);
 
                 $usuarioModel = new UsuarioModel();
                 $retorno = $usuarioModel->findUsuario($usuario);
                 if($retorno){
                     Session::logar($retorno[0]);
+                    $container['retorno']['redirecionar'] = '/cupom';
+                    $container['retorno']['msg'] = 'Login efetuado com sucesso!';
                 }else{
                     $container['retorno']['sucesso'] = false;
                     $container['retorno']['msg'] = 'Erro ao se logar. Verifique seus dados ou recupere a sua senha.';
                 }
             }else{
                 $container['retorno']['sucesso'] = false;
-                $container['retorno']['msg'] = 'Preencha corretamente os campos obrigatórios.';
+                $container['retorno']['msg'] = 'Preencha corretamente os campos obrigatórios e tente novamente.';
             }
         }
         if(Original::isAjax()){
             $this->json($container);
         }else{
-            $this->redirect('/cupom');
+            $this->render('/home', $container);
         }
     }
 

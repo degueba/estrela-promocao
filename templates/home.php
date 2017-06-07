@@ -12,7 +12,7 @@ if(isset($container['retorno'])){
 ?>
 
 LOGIN:<br>
-<form method="post">
+<form method="post" action="/logar">
     <input type="email" name="email" placeholder="Seu email">
     <br>
     <input type="password" name="senha" placeholder="Sua senha">
@@ -22,7 +22,7 @@ LOGIN:<br>
 
 <hr>
 CADASTRO:<br>
-<form method="post" action="cadastro">
+<form method="post" action="/cadastro">
     <input type="hidden" name="tipo_retorno" value="ajax">
     <input type="text" name="nome" placeholder="Seu nome">
     <br>
