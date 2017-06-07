@@ -4,6 +4,13 @@ Original::loadBlock('head');
 ?>
 
 <body>
+
+<?php
+if(isset($container['retorno'])){
+    echo $container['retorno']['msg'].'<hr>';
+}
+?>
+
 LOGIN:<br>
 <form method="post">
     <input type="email" name="email" placeholder="Seu email">
@@ -15,7 +22,8 @@ LOGIN:<br>
 
 <hr>
 CADASTRO:<br>
-<form method="post">
+<form method="post" action="cadastro">
+    <input type="hidden" name="tipo_retorno" value="ajax">
     <input type="text" name="nome" placeholder="Seu nome">
     <br>
     <input type="email" name="email" placeholder="Seu email">

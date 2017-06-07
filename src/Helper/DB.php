@@ -2,6 +2,9 @@
 
 namespace src\Helper;
 
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+
 /*******************************
  Example initialization:
  
@@ -56,12 +59,15 @@ class DB
         }
         else
         {
-            trigger_error( $message );
+            //trigger_error( $message );
+            $log = new Logger('mysql');
+            $log->pushHandler(new StreamHandler(ROOT.'logs/mysql.log', Logger::WARNING));
+            $log->addWarning($error.' : '.$query);
         }
 
         if( !defined( 'DISPLAY_DEBUG' ) || ( defined( 'DISPLAY_DEBUG' ) && DISPLAY_DEBUG ) )
         {
-            echo $message;   
+            echo $message;
         }
     }
     
