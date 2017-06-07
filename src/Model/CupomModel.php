@@ -14,8 +14,9 @@ class CupomModel extends BaseModel {
                 cupom.usuario_id
                 FROM
                 cupom
-                INNER JOIN nota ON nota.id = cupom.nota_id
-                INNER JOIN usuario ON usuario.id = cupom.usuario_id";
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1";
         if(!empty($cupom['id'])){
             $sql .= " AND cupom.id = ".$cupom['id'];
         }
