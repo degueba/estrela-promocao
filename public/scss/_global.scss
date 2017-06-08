@@ -519,13 +519,16 @@ body {
                 border-bottom-right-radius: 20px;
                 border-bottom-left-radius: 20px;
                 padding: 0;
-                max-height: 450px;
-                height: 450px;
+                max-height: 550px;
+                height: 540px;
                 padding: 50px;
                 font-family: 'omnesbold';
                 color: #fff;
                 form {
                     color: #fff;
+                    &#form-login {
+                        margin-top: 50px;
+                    }
                     label {
                         color: #fff;
                     }

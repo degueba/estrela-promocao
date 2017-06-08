@@ -14,8 +14,8 @@ Original::loadBlock('head');
                 <div class="col-lg-6">
                     <h1 class="title">prepare as malas e boa diversão</h1>
                     <h4 class="subtitle">Na promoção <strong>80 anos</strong> da Estrela comprando a partir de R$ 80,00 em <strong>brinquedos Estrela</strong> você ganha um Pega-Varetas exclusivo e ainda concorre a uma viagem incrível <strong>Volta ao Mundo</strong>  para duas pessoas com tudo pago.</h4>
-                    <a href="" class="btn btn-default btn-participa">Como participar</a>
-                    <a href="" class="btn btn-default btn-cadastre">Cadastre-se</a>
+                    <a href="#como-participar" class="scroll-suave btn btn-default btn-participa">Como participar</a>
+                    <a href="#cadastro-ou-login" class="scroll-suave btn btn-default btn-cadastre">Cadastre-se</a>
                 </div>
                 <div class="col-lg-6 pull-right globo-promocao--volta---mundo">
                     <img src="images/globo_promocao_volta_ao_mundo.png" alt="">
@@ -747,12 +747,20 @@ Original::loadBlock('head');
                         <div role="tabpanel" class="tab-pane active" id="cadastrar">
                             <form id="form-cadastro" method="POST">
                                 
-                                <div class="col-lg-6">
+                                <div class="col-lg-12">
                                     <div class="form-group">
                                         <label for="">Nome completo</label>
                                         <input type="text" class="form-control" name="nome">
                                     </div>
                                 </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="">Cpf</label>
+                                        <input type="text" class="form-control" name="cpf" id="cpf" required>
+                                    </div>
+                                </div>
+
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label for="">Telefone (com DDD)</label>
@@ -789,7 +797,7 @@ Original::loadBlock('head');
                                 <div class="col-lg-6">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" name="regulamento"> Li o <u>regulamento</u> e concordo com os termos
+                                            <input type="checkbox" required name="regulamento" oninvalid="sweetAlert('Atenção', 'Você só poderá continuar se concordar com os termos do regulamento!', 'error')"> Li o <u>regulamento</u> e concordo com os termos
                                         </label>
                                     </div>
 
@@ -813,7 +821,7 @@ Original::loadBlock('head');
                                     </div>
                                     <div class="form-group">
                                         <label for="">Senha</label>
-                                        <input type="text" name="senha" class="form-control">
+                                        <input type="password" name="senha" class="form-control">
                                     </div>
                                     <div class="text-center"><a href="" class="link-esqueci--senha">Esqueci minha senha :(</a></div>
                                     <button type="submit" id="entrar-usuario" class="center-block btn-block btn btn-default btn-login">Entrar</button>

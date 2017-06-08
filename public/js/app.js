@@ -40,13 +40,62 @@ function camposIguais(campo1, campo2, msg) {
     }
 }
 
+function removeProdutoEstrela(n) {
+    $(n).remove();
+}
 
 jQuery(function() {
     $("#telefone").mask("(99) 9999-9999?9");
-    $("#valor_produto").maskMoney({
+    $("#cpf").mask("999.999.999-99");
+
+
+    $(".mask_valor_produto").maskMoney({
         decimal: ",",
         thousands: "."
     });
+
+    // PÁGINA CUPOM
+    var NUMERACAO_CAMPO = 0;
+
+    $(".btn-add-produto").on("click", function() {
+        $container = $(".produto_estrela");
+
+        var n = NUMERACAO_CAMPO++;
+
+        $container_clone = $container.clone();
+        $container_clone.appendTo($container.parent()).removeClass("produto_estrela").addClass("produto_estrela-" + n);
+
+        $container_clone.children(".valor_produto").append('<button type="button" class="btn btn-danger" onclick="removeProdutoEstrela(\'.produto_estrela-' + n + '\');">x</button>');
+        $container_clone.children(".valor_produto").children(".btn-danger").css({
+            'position': 'absolute',
+            'right': '15px',
+            'top': '30px',
+            'border-top-right-radius': '19px',
+            'border-bottom-right-radius': '19px',
+            'border-top-left-radius': '0px',
+            'border-bottom-left-radius': '0px'
+        });
+
+
+        // Limpando os campos
+        $container_clone.children(".nome_produto").children("input").val("");
+        $container_clone.children(".valor_produto").children("input").val("");
+
+        $('#form-cadastrar-nota').animate({
+            scrollTop: $(this).offset().top
+        }, 2000);
+
+        $(".mask_valor_produto").maskMoney({
+            decimal: ",",
+            thousands: "."
+        });
+
+    });
+
+
+
+
+
 
     var $doc = $('html, body');
 
