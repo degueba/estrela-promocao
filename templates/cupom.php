@@ -65,41 +65,49 @@ use src\Helper\Session;
                         <h3 class="title pull-left ">Cadastrar Nota Fiscal</h3> <small class="pull-right "> <i class="fa fa-warning "></i> Cadastre somente produtos Estrela</small>
                     </header>
                     <form class="col-lg-12" id="form-cadastrar-nota">
+                       
                         <div class="form-group ">
-                            <div class="col-lg-6 ">
-                                <label for=" ">Data da compra</label>
-                                <input type="text " name=" " value=" " class="form-control ">
+                            <div>
+                                <h5 class="text-muted">Data da compra</h5>
+                                <div class="col-lg-2">
+                                    <label for=" ">Dia</label>
+                                    <input type="text " name="dia" id="dia" value=" " class="form-control ">
+                                </div>
+                                <div class="col-lg-2">
+                                    <label for=" ">Mês</label>
+                                    <input type="text " name="mes" id="mes" value=" " class="form-control ">
+                                </div>
+                                <div class="col-lg-3">
+                                    <label for=" ">Ano</label>
+                                    <input type="text " name="ano" id="ano" value=" " class="form-control ">
+                                </div>
                             </div>
-                            <div class="col-lg-6 ">
+                            <div class="col-lg-5">
                                 <label for=" ">Número da nota fiscal</label>
-                                <input type="text " name=" " value=" " class="form-control ">
+                                <input type="text " name="numero" value=" " class="form-control ">
                             </div>
                         </div>
                         <div class="form-group ">
-                            <div class="col-lg-6 ">
-                                <label for=" ">Nome da Loja</label>
-                                <input type="text " name=" " value=" " class="form-control ">
-                            </div>
-                            <div class="col-lg-6 ">
+                            <div class="col-lg-6">
                                 <label for=" ">CNPJ da Loja</label>
-                                <input type="text " name=" " value=" " class="form-control ">
+                                <input type="text " name="cnpj" value=" " class="form-control ">
                             </div>
                         </div>
                         <div class="form-group ">
                             <div class="col-lg-3 ">
                                 <label for=" ">Estado da Loja*</label>
-                                <input type="text " name=" " value=" " class="form-control ">
+                                <input type="text " name="uf" value=" " class="form-control ">
                             </div>
                             <div class="col-lg-3 ">
                                 <label for=" ">Cidade*</label>
-                                <input type="text " name=" " value=" " class="form-control ">
+                                <input type="text " name="cidade" value=" " class="form-control ">
                             </div>
-                            <div class="col-lg-6 ">
+                            <div class="col-lg-12">
                                 <label for=" ">Site da Loja **</label>
                                 <!-- small class="help-msg ">* Somente para compras online</small-->
                                 <div class="input-group ">
                                     <span class="input-group-addon ">www.</span>
-                                    <input type="text " name=" " value=" " class="form-control ">
+                                    <input type="text " name="site" value=" " class="form-control ">
                                 </div>
                             </div>
                         </div>
@@ -107,11 +115,11 @@ use src\Helper\Session;
                             <div class="produto_estrela">
                                 <div class="col-lg-6 nome_produto">
                                     <label for=" ">Produto(s) Estrela comprados</label>
-                                    <input type="text " name=" " value=" " class="form-control ">
+                                    <input type="text " name="produto[]" value=" " class="form-control ">
                                 </div>
                                 <div class="col-lg-6 valor_produto">
                                     <label for=" ">Valor do produto</label>
-                                    <input type="text " name=" " value=" " class="form-control mask_valor_produto">
+                                    <input type="text " name="valor_produto[]" value=" " class="form-control mask_valor_produto">
                                 </div>
                             </div>
                         </div>
