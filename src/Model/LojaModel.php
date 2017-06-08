@@ -10,10 +10,7 @@ class LojaModel extends BaseModel {
         $sql = "SELECT
                 loja.id,
                 loja.nome,
-                loja.cnpj,
-                loja.uf,
-                loja.cidade,
-                loja.site_loja
+                loja.cnpj
                 FROM
                 loja
                 WHERE 1=1";
@@ -25,12 +22,10 @@ class LojaModel extends BaseModel {
             $sql .= " AND loja.cnpj = '".$loja['cnpj']."'";
             $limit = true;
         }
-        if(!empty($loja['usuario_id'])){
-            $sql .= " AND loja.usuario_id = ".$loja['usuario_id'];
-        }
         if($limit){
             $sql .= " LIMIT 0,1";
         }
+        //echo $sql; die;
         $retorno = $this->DB->get_results($sql);
         if(count($retorno) > 0){
             return $retorno;

@@ -14,7 +14,7 @@ CUPONS:<br>
 <?php
 if(isset($container['cupom'])){
     foreach($container['cupom'] as $c){
-        echo $c['numero'].' - '.$c['created'].'<br>';
+        echo $c['serie'].' - '.$c['numero'].' - '.$c['created'].'<br>';
     }
 }else{
     echo 'nenhum cupom';
@@ -26,9 +26,7 @@ CADASTRO:<br>
 <form method="post" action="">
     <input type="text" name="numero" placeholder="Numero da nota">
     <br>
-    <input type="text" name="data_compra" placeholder="Data da compra">
-    <br>
-    <input type="text" name="loja" placeholder="Nome da loja">
+    <input type="text" name="dia" placeholder="Dia da compra"> <input type="text" name="mes" placeholder="Mes da compra"> <input type="text" name="ano" placeholder="Ano da compra">
     <br>
     <input type="text" name="cnpj" placeholder="CNPJ da loja">
     <br>

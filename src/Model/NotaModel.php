@@ -46,6 +46,15 @@ class NotaModel extends BaseModel {
         }
     }
 
+    public function addNotaHasLoja($notaHasLoja)
+    {
+        if($this->DB->insert('nota_has_loja', $notaHasLoja)){
+            return $this->DB->lastid();
+        }else{
+            return false;
+        }
+    }
+
     public function updateNota($nota, $id)
     {
         $where_clause = array(

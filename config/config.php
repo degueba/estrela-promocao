@@ -17,5 +17,3 @@ define( 'TITLE_PAGE', 'Título');
 
 // CONFIGS DA PROMOÇÃO
 define( 'VALOR_GASTO_POR_CUPOM', 80);
-
-require '../vendor/autoload.php';

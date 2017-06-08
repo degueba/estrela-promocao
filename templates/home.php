@@ -30,6 +30,8 @@ CADASTRO:<br>
     <br>
     <input type="text" name="telefone" placeholder="Seu telefone">
     <br>
+    <input type="text" name="cpf" placeholder="Seu CPF">
+    <br>
     <input type="password" name="senha" placeholder="Sua senha">
     <br>
     <button type="submit">CADASTRAR</button>
