@@ -26,4 +26,8 @@ class Original
         fputs($fp,$message."\r\n\r\n");
         fclose($fp);
     }
+
+    public static function formataDataBanco($data){
+        return implode("-",array_reverse(explode("/",$data)));
+    }
 }

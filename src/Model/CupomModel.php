@@ -11,7 +11,8 @@ class CupomModel extends BaseModel {
                 cupom.numero,
                 cupom.serie,
                 cupom.nota_id,
-                cupom.usuario_id
+                cupom.usuario_id,
+                cupom.created
                 FROM
                 cupom
                 LEFT JOIN nota ON nota.id = cupom.nota_id
@@ -31,7 +32,7 @@ class CupomModel extends BaseModel {
         }
 
         if($sortear){
-            $sql .= " AND cupom.usuario_id IS NULL AND cupom.nota_id IS NULL ORDER BY RAND() LIMIT 0,10000";
+            $sql .= " AND cupom.usuario_id IS NULL AND cupom.nota_id IS NULL ORDER BY RAND() LIMIT 0,100";
         }
 
         $retorno = $this->DB->get_results($sql);
