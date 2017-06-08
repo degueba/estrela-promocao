@@ -5,6 +5,7 @@ use src\Helper\Original;
 <body>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <head>
     <title></title>
     <meta charset="UTF-8">
@@ -155,12 +156,17 @@ use src\Helper\Original;
                 </div>
             </div>
 =======
+=======
+>>>>>>> 5e0eda1ab3cc186446ecbffe8ccdc0c90d032b5e
 <?php
 if(isset($container['retorno']['msg'])){
     echo $container['retorno']['msg'].'<hr>';
 }
 ?>
+<<<<<<< HEAD
 >>>>>>> b84f6a0c680edd990330d41c6f827800aa75fd6a
+=======
+>>>>>>> 5e0eda1ab3cc186446ecbffe8ccdc0c90d032b5e
 
 CUPONS:<br>
 <?php
