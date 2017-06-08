@@ -1,0 +1,639 @@
+[2017-06-07 20:59:07] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner@hotmail.com', '(21) 9824-02706', 'diguin94') [] []
+[2017-06-07 21:00:47] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner@hotmail.com', '(21) 9824-02706', 'diguin94') [] []
+[2017-06-07 21:15:33] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo', 'rbdesigner@hotmail.com', '(21) 9824-02706', 'diguin94') [] []
+[2017-06-07 21:15:39] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo', 'rbdesigner@hotmail.com', '(21) 9824-02706', 'diguin94') [] []
+[2017-06-07 21:15:41] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo', 'rbdesigner@hotmail.com', '(21) 9824-02706', 'diguin94') [] []
+[2017-06-07 21:15:47] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo', 'rbdesigner@hotmail.com', '(21) 9824-02706', 'diguin94') [] []
+[2017-06-07 21:15:55] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo', 'rbdesigner@hotmail.com', '(21) 9824-02706', 'diguin94') [] []
+[2017-06-07 23:13:18] mysql.WARNING: Duplicate entry 'rbdesigner3@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner3@hotmail.com', '(21) 9824-02706', 'dsd') [] []
+[2017-06-07 23:13:50] mysql.WARNING: Duplicate entry 'rbdesigner3@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner3@hotmail.com', '(21) 9824-02706', 'dsd') [] []
+[2017-06-07 23:19:46] mysql.WARNING: Duplicate entry 'fabiano12@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Fabiano', 'fabiano12@hotmail.com', '(21) 9824-02706', 'asd') [] []
+[2017-06-07 23:19:50] mysql.WARNING: Duplicate entry 'fabiano12@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Fabiano', 'fabiano12@hotmail.com', '(21) 9824-02706', 'asd') [] []
+[2017-06-07 23:20:01] mysql.WARNING: Duplicate entry 'fabiano12@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Fabiano', 'fabiano12@hotmail.com', '(21) 9824-02706', 'asd') [] []
+[2017-06-07 23:20:37] mysql.WARNING: Duplicate entry 'fabiano12@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Fabiano', 'fabiano12@hotmail.com', '(21) 9824-02706', 'asd') [] []
+[2017-06-07 23:20:47] mysql.WARNING: Duplicate entry 'fabiano12@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Fabiano', 'fabiano12@hotmail.com', '(21) 9824-02706', 'asd') [] []
+[2017-06-07 23:21:27] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('dasdsads', 'rbdesigner@hotmail.com', '(21) 9824-02706', '123') [] []
+[2017-06-07 23:21:35] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('dasdsads', 'rbdesigner@hotmail.com', '(21) 9824-02706', '123') [] []
+[2017-06-07 23:22:14] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('dasdsads', 'rbdesigner@hotmail.com', '(21) 9824-02706', '123') [] []
+[2017-06-07 23:22:29] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner@hotmail.com', '(21) 9824-02706', '123') [] []
+[2017-06-07 23:23:06] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner@hotmail.com', '(21) 9824-02706', '123') [] []
+[2017-06-07 23:23:09] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner@hotmail.com', '(21) 9824-02706', '123') [] []
+[2017-06-07 23:23:12] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner@hotmail.com', '(21) 9824-02706', '123') [] []
+[2017-06-07 23:24:08] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('rodrigo', 'rbdesigner@hotmail.com', '(21) 9824-02706', '123') [] []
+[2017-06-07 23:24:26] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('rodrigo', 'rbdesigner@hotmail.com', '(21) 9824-02706', '123') [] []
+[2017-06-07 23:24:43] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('dsadsdas', 'rbdesigner@hotmail.com', '(21) 9824-02706', '123') [] []
+[2017-06-07 23:25:36] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner@hotmail.com', '(23) 1231-23123', '123') [] []
+[2017-06-07 23:26:12] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner@hotmail.com', '(23) 1231-23123', '123') [] []
+[2017-06-07 23:27:52] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner@hotmail.com', '(12) 1312-32123', '123') [] []
+[2017-06-07 23:28:20] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner@hotmail.com', '(12) 1312-32123', '123') [] []
+[2017-06-07 23:28:33] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner@hotmail.com', '(21) 2122-11212', '123') [] []
+[2017-06-07 23:29:35] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner@hotmail.com', '(12) 3131-23123', '123') [] []
+[2017-06-07 23:29:56] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner@hotmail.com', '(12) 3131-23123', '123') [] []
+[2017-06-07 23:30:01] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner@hotmail.com', '(12) 3131-23123', '123') [] []
+[2017-06-07 23:30:51] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner@hotmail.com', '(12) 3131-23123', '123') [] []
+[2017-06-07 23:31:19] mysql.WARNING: Duplicate entry 'rbdesigner@hotmail.com' for key 'email_UNIQUE' : INSERT INTO usuario (nome, email, telefone, senha) VALUES ('Rodrigo Botelho', 'rbdesigner@hotmail.com', '(12) 3123-12312', '123') [] []
+[2017-06-08 16:01:16] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 44 [] []
+[2017-06-08 16:04:23] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:50:44] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:50:45] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:51:35] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:51:35] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:51:56] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:51:56] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:52:27] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:52:28] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:52:54] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:53:16] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:53:17] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:53:21] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:53:22] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:53:28] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:55:22] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:55:26] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:55:38] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:55:54] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:56:17] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 45 [] []
+[2017-06-08 18:56:59] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 18:58:39] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 18:58:42] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 18:58:44] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 18:58:44] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 18:58:51] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 18:58:52] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 18:58:52] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 18:59:01] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 18:59:12] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 18:59:14] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 18:59:14] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 18:59:14] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 18:59:14] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 18:59:14] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 18:59:16] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 18:59:24] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 19:00:37] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 19:01:48] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 19:03:10] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 19:03:47] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 19:04:33] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 19:04:40] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 19:07:39] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 19:07:54] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 19:08:03] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 19:08:29] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 19:09:30] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 19:09:57] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 19:10:32] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 19:14:35] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 19:14:52] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 19:15:26] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-08 19:15:27] mysql.WARNING: Unknown column 'cupom.serie' in 'field list' : SELECT
+                cupom.id,
+                cupom.numero,
+                cupom.serie,
+                cupom.nota_id,
+                cupom.usuario_id
+                FROM
+                cupom
+                LEFT JOIN nota ON nota.id = cupom.nota_id
+                LEFT JOIN usuario ON usuario.id = cupom.usuario_id
+                WHERE 1=1 AND cupom.usuario_id = 46 [] []

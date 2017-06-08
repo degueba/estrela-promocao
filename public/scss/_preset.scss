@@ -1,0 +1,9 @@
+/* CLASSES GENÉRICAS */
+.imgrpl {display: block; text-indent: -9999px; border: 0; font-size: 0}
+.show, .block{display: block}
+.hide{display: none}
+.invisible{visibility: hidden}
+.clear{clear: both}
+.clearfix:after, .inner:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0}.clearfix, .inner {display: inline-block}html[xmlns] .clearfix, html[xmlns] .inner {display: block}* html .clearfix, * html .inner {height: 1%}
+.fl{ float: left; }
+.fr{ float: right; }

@@ -1,0 +1,178 @@
+body.user-profile {
+    background-color: #F0F0F0;
+    font-family: "omnes_regularregular" !important;
+    .navbar {
+        // Menu
+        .navbar-nav {
+            li {
+                padding-top: 10px !important;
+            }
+        }
+    }
+    .title-promocao--volta---mundo {
+        font-size: 4rem;
+        margin-right: 50px;
+        a {
+            font-family: "omnesbold" !important;
+        }
+        img {
+            margin: -15px 0 15px 0;
+        }
+    }
+    h2.title {
+        color: #04466F;
+    }
+    .box-user {
+        border-radius: 20px;
+        background-color: #fff;
+        height: auto;
+        min-height: 490px;
+        margin: 0 0 20px;
+        .help-msg {
+            font-size: 12px;
+            color: #737373;
+        }
+        header {
+            border-bottom: 1px solid #ccc;
+            height: 90px;
+            margin-bottom: 20px;
+            padding: 15px 35px;
+            .title {
+                font-family: 'omnes_regularregular';
+                color: #FB7314;
+            }
+            small {
+                margin-top: 20px;
+                color: #919190;
+                font-family: 'omnes_regularregular';
+            }
+        }
+        label {
+            color: #919190;
+            font-family: 'omnes_regularregular';
+            font-size: 12px;
+        }
+        .form-control {
+            border-radius: 20px;
+            background-color: #fff;
+            color: #919190;
+            padding-left: 20px;
+            border: 1px solid #ccc;
+        }
+        // AQUI COMEÇAM OS ESPECÍFICOS
+        &.cadastrar-nota {
+            #form-cadastrar-nota {
+                height: 379px;
+                overflow-y: auto;
+                padding-bottom: 20px;
+                .produto_estrela {
+                    width: 100%;
+                }
+            }
+            .btn-add-produto {
+                border: none;
+                margin-top: 20px;
+                color: #737373;
+                i.fa-plus {
+                    color: #fff;
+                    background-color: #006FB4;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 100%;
+                    line-height: 30px;
+                    font-size: 20px;
+                    margin-right: 10px;
+                }
+            }
+            .btn-cadastrar {
+                background-color: #FB7314;
+                padding: 8px 60px;
+                color: #fff;
+                border-radius: 20px;
+            }
+            .input-group-addon {
+                background-color: unset;
+                border: none;
+                color: #959594;
+            }
+        }
+        &.meus-cupons {
+            position: relative;
+            height: 600px;
+            .title {
+                color: #04466F
+            }
+            .content {
+                overflow-y: scroll;
+                height: 442px;
+                &::-webkit-scrollbar-track {
+                    background-color: transparent;
+                }
+                &::-webkit-scrollbar {
+                    width: 10px;
+                    margin-left: 10px;
+                    background-color: transparent;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: #ddd;
+                    border-radius: 10px;
+                }
+                .lista-meus--cupons {
+                    padding: 10px;
+                    border-bottom: 1px solid #ccc;
+                    height: 90px;
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+                    h6 {
+                        color: #919190;
+                    }
+                    strong {
+                        color: #868686;
+                    }
+                }
+            }
+            footer {
+                position: absolute;
+                bottom: 0;
+                background-color: #006FB4;
+                color: #F6EE28;
+                width: 100%;
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+                text-align: center;
+                padding: 10px;
+            }
+        }
+        &.meu-perfil {
+            header {
+                .title {
+                    color: #006FB4;
+                }
+                .btn-edit--perfil {
+                    border: 1px solid #FB7314;
+                    color: #FB7314;
+                    border-radius: 20px;
+                    &:hover {
+                        background-color: #FB7314;
+                        color: #fff;
+                    }
+                }
+            }
+            .content {
+                padding: 20px;
+                .lista-editar--perfil {
+                    li {
+                        color: #878787;
+                    }
+                }
+            }
+        }
+    }
+    // rodape
+    footer.rodape {
+        background-color: #0067A8;
+        height: 30px;
+        margin-top: 40px;
+    }
+}

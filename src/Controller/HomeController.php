@@ -69,7 +69,6 @@ class HomeController extends BaseController {
                 $usuario = [];
                 $usuario['email'] = $post['email'];
                 $usuario['senha'] = md5($post['senha']);
-
                 $usuarioModel = new UsuarioModel();
                 $retorno = $usuarioModel->findUsuario($usuario);
                 if($retorno){
