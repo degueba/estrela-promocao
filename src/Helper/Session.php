@@ -18,9 +18,9 @@ class Session
 
     public static function logado(){
         if(isset($_SESSION["usuario"])){
-            return true;
+            return $_SESSION["usuario"];
         }else{
-            return false;
+            return null;
         }
     }
 
@@ -36,9 +36,9 @@ class Session
 
     public static function logadoAdmin(){
         if(isset($_SESSION["admin"])){
-            return true;
+            return $_SESSION["admin"];
         }else{
-            return false;
+            return null;
         }
     }
 
