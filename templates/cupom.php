@@ -1,11 +1,11 @@
 <?php
 use src\Helper\Original;
+use src\Helper\Session;
 ?>
 
-<body>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 <head>
     <title></title>
     <meta charset="UTF-8">
@@ -155,60 +155,97 @@ use src\Helper\Original;
                     </div>
                 </div>
             </div>
-=======
-=======
->>>>>>> 5e0eda1ab3cc186446ecbffe8ccdc0c90d032b5e
-<?php
-if(isset($container['retorno']['msg'])){
-    echo $container['retorno']['msg'].'<hr>';
-}
-?>
-<<<<<<< HEAD
->>>>>>> b84f6a0c680edd990330d41c6f827800aa75fd6a
-=======
->>>>>>> 5e0eda1ab3cc186446ecbffe8ccdc0c90d032b5e
 
-CUPONS:<br>
-<?php
-if(isset($container['cupom'])){
-    foreach($container['cupom'] as $c){
-        echo $c['serie'].' - '.$c['numero'].' - '.$c['created'].'<br>';
-    }
-}else{
-    echo 'nenhum cupom';
-}
-?>
+            <div class="col-lg-4 ">
 
-<hr>
-CADASTRO:<br>
-<form method="post" action="">
-    <input type="text" name="numero" placeholder="Numero da nota">
-    <br>
-    <input type="text" name="dia" placeholder="Dia da compra"> <input type="text" name="mes" placeholder="Mes da compra"> <input type="text" name="ano" placeholder="Ano da compra">
-    <br>
-    <input type="text" name="cnpj" placeholder="CNPJ da loja">
-    <br>
-    <input type="text" name="uf" placeholder="Estado">
-    <br>
-    <input type="text" name="cidade" placeholder="Cidade">
-    <br>
-    <input type="text" name="site" placeholder="Site da loja">
-    <br>
-    produtos:
-    <br>
-    <input type="text" name="produto[]" placeholder="Nome do produto">
-    <br>
-    <input type="text" name="valor_produto[]" placeholder="valor">
-    <br>
-    <input type="text" name="produto[]" placeholder="Nome do produto">
-    <br>
-    <input type="text" name="valor_produto[]" placeholder="Valor">
-    <br>
-    <button type="submit">CADASTRAR</button>
-</form>
+                <div class="box-user meus-cupons ">
+                    <header>
+                        <h3 class="title pull-left ">Meus cupons</h3>
+                    </header>
+                    <div class="content ">
+                        <ul>
+                            <li class="lista-meus--cupons ">
+                                <div class="pull-left ">
+                                    <h6>Código</h6>
+                                    <strong>05522</strong>
+                                </div>
+                                <div class="pull-right ">
+                                    <h6>Entrada</h6>
+                                    <strong>22/04/2017</strong>
+                                </div>
+                            </li>
+                            <li class="lista-meus--cupons ">
+                                <div class="pull-left ">
+                                    <h6>Código</h6>
+                                    <strong>05522</strong>
+                                </div>
+                                <div class="pull-right ">
+                                    <h6>Entrada</h6>
+                                    <strong>22/04/2017</strong>
+                                </div>
+                            </li>
+                            <li class="lista-meus--cupons ">
+                                <div class="pull-left ">
+                                    <h6>Código</h6>
+                                    <strong>05522</strong>
+                                </div>
+                                <div class="pull-right ">
+                                    <h6>Entrada</h6>
+                                    <strong>22/04/2017</strong>
+                                </div>
+                            </li>
+                            <li class="lista-meus--cupons ">
+                                <div class="pull-left ">
+                                    <h6>Código</h6>
+                                    <strong>05522</strong>
+                                </div>
+                                <div class="pull-right ">
+                                    <h6>Entrada</h6>
+                                    <strong>22/04/2017</strong>
+                                </div>
+                            </li>
+                            <li class="lista-meus--cupons ">
+                                <div class="pull-left ">
+                                    <h6>Código</h6>
+                                    <strong>05522</strong>
+                                </div>
+                                <div class="pull-right ">
+                                    <h6>Entrada</h6>
+                                    <strong>22/04/2017</strong>
+                                </div>
+                            </li>
+                            <li class="lista-meus--cupons ">
+                                <div class="pull-left ">
+                                    <h6>Código</h6>
+                                    <strong>05522</strong>
+                                </div>
+                                <div class="pull-right ">
+                                    <h6>Entrada</h6>
+                                    <strong>22/04/2017</strong>
+                                </div>
+                            </li>
+                            <li class="lista-meus--cupons ">
+                                <div class="pull-left ">
+                                    <h6>Código</h6>
+                                    <strong>05522</strong>
+                                </div>
+                                <div class="pull-right ">
+                                    <h6>Entrada</h6>
+                                    <strong>22/04/2017</strong>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer>
+                        6 cupons
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
 
-</body>
-
-<?php
+<div class="row">
+    <?php
 Original::loadBlock('footer');
 ?>
+</div>
