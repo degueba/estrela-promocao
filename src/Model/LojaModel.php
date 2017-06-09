@@ -32,9 +32,10 @@ class LojaModel extends BaseModel {
             $sql .= " AND loja.cidade = '".$loja['cidade']."'";
             $limitOne = true;
         }
+        $pagina = $paginacao['page']<=1?1:$paginacao['page']*$paginacao['qtd'];
         if($paginacao){
             $sql .= " AND loja.uf IS NOT NULL
-                    LIMIT ".$paginacao['page']*$paginacao['qtd'].','.$paginacao['qtd'];
+                    LIMIT ".$pagina.','.$paginacao['qtd'];
         }else{
             if($limitOne){
                 $sql .= " LIMIT 0,1";
