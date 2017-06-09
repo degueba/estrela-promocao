@@ -30,5 +30,15 @@ $rotas->respond('/cupom', function ($request, $response, $service) {
     $pag->index($request, $response, $service);
 });
 
+$rotas->respond('/getCidades', function ($request, $response, $service) {
+    $pag = new HomeController();
+    $pag->getCidades($request, $response, $service);
+});
+
+$rotas->respond('/getLojas', function ($request, $response, $service) {
+    $pag = new HomeController();
+    $pag->getLojas($request, $response, $service);
+});
+
 
 $rotas->dispatch();
