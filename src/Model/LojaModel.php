@@ -34,6 +34,40 @@ class LojaModel extends BaseModel {
         }
     }
 
+    public function findEstadosComLoja()
+    {
+        $sql = "SELECT DISTINCT 
+                loja.uf
+                FROM
+                loja WHERE loja.uf IS NOT NULL";
+        //echo $sql; die;
+        $retorno = $this->DB->get_results($sql);
+        if(count($retorno) > 0){
+            return $retorno;
+        }else{
+            return null;
+        }
+    }
+
+    public function findCidadesComLoja($uf = null)
+    {
+        $sql = "SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL";
+        if($uf){
+            $sql .= " AND loja.uf = '".$uf."'";
+        }
+        //echo $sql; die;
+        $retorno = $this->DB->get_results($sql);
+        if(count($retorno) > 0){
+            return $retorno;
+        }else{
+            return null;
+        }
+    }
+
     public function addLoja($loja)
     {
         if($this->DB->insert('loja', $loja)){

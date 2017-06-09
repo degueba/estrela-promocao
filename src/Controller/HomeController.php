@@ -5,12 +5,38 @@ namespace src\Controller;
 use src\Helper\Original;
 use src\Helper\Session;
 use src\Model\UsuarioModel;
+use src\Model\LojaModel;
 
 class HomeController extends BaseController {
 
     public function index($request, $response, $service)
     {
-        $this->render('home');
+        $lojaModel = new LojaModel();
+        $container['uf'] = $lojaModel->findEstadosComLoja();
+        $this->render('home', $container);
+    }
+
+    public function getCidades($request, $response, $service)
+    {
+        $container = [];
+        $container['retorno']['msg'] = '';
+        $container['retorno']['sucesso'] = true;
+        $uf = !empty($post['uf'])?$post['uf']:null;
+        $lojaModel = new LojaModel();
+        $container['cidades'] = $lojaModel->findCidadesComLoja($uf);
+        $this->json($container);
+    }
+
+    public function getLojas($request, $response, $service)
+    {
+        // FALTA IMPLEMENTAR
+        $container = [];
+        $container['retorno']['msg'] = '';
+        $container['retorno']['sucesso'] = true;
+        $uf = !empty($post['uf'])?$post['uf']:null;
+        $lojaModel = new LojaModel();
+        $container['cidades'] = $lojaModel->findCidadesComLoja($uf);
+        $this->json($container);
     }
 
     public function cadastro($request, $response, $service)
@@ -20,14 +46,15 @@ class HomeController extends BaseController {
         $container['retorno']['sucesso'] = true;
         if($request->method() == 'POST'){
             $post = $request->paramsPost();
-            if(!empty($post['nome']) && !empty($post['email']) && !empty($post['telefone']) && !empty($post['senha'])){
+            if(!empty($post['nome']) && !empty($post['email']) && !empty($post['cpf']) && !empty($post['telefone']) && !empty($post['senha'])){
                 $usuario = [];
-                $usuario['email'] = $post['email'];
+                $usuario['cpf'] = $post['cpf'];
 
                 $usuarioModel = new UsuarioModel();
                 $retorno = $usuarioModel->findUsuario($usuario);
 
                 if(!$retorno){
+                    $usuario['email'] = $post['email'];
                     $usuario['nome'] = $post['nome'];
                     $usuario['telefone'] = $post['telefone'];
                     $usuario['senha'] = md5($post['senha']);
