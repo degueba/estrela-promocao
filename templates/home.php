@@ -1,8 +1,6 @@
 <?php
 use src\Helper\Original;
 Original::loadBlock('head');
-
-var_dump($container);
 ?>
 
 

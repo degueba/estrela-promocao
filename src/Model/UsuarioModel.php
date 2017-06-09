@@ -16,6 +16,10 @@ class UsuarioModel extends BaseModel {
             $sql .= " AND usuario.email = '".$usuario['email']."'";
             $limit = true;
         }
+        if(!empty($usuario['cpf'])){
+            $sql .= " AND usuario.cpf = '".$usuario['cpf']."'";
+            $limit = true;
+        }
         if(!empty($usuario['senha'])){
             $sql .= " AND usuario.senha = '".$usuario['senha']."'";
         }

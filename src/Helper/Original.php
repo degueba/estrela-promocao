@@ -30,4 +30,8 @@ class Original
     public static function formataDataBanco($data){
         return implode("-",array_reverse(explode("/",$data)));
     }
+
+    public static function formataData($data){
+        return date("d/m/Y", strtotime($data));
+    }
 }

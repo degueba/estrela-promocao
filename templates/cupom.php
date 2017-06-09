@@ -64,22 +64,21 @@ use src\Helper\Session;
                     <header>
                         <h3 class="title pull-left ">Cadastrar Nota Fiscal</h3> <small class="pull-right "> <i class="fa fa-warning "></i> Cadastre somente produtos Estrela</small>
                     </header>
-                    <form class="col-lg-12" id="form-cadastrar-nota">
+                    <form class="col-lg-12" method="post" id="form-cadastrar-nota">
                        
                         <div class="form-group ">
                             <div>
-                                <h5 class="text-muted">Data da compra</h5>
                                 <div class="col-lg-2">
-                                    <label for=" ">Dia</label>
-                                    <input type="text " name="dia" id="dia" value=" " class="form-control ">
+                                    <label for=" ">Dia da compra</label>
+                                    <input type="text " name="dia" id="dia" value="" class="form-control ">
                                 </div>
                                 <div class="col-lg-2">
-                                    <label for=" ">Mês</label>
-                                    <input type="text " name="mes" id="mes" value=" " class="form-control ">
+                                    <label for=" ">Mês da compra</label>
+                                    <input type="text " name="mes" id="mes" value="" class="form-control ">
                                 </div>
                                 <div class="col-lg-3">
-                                    <label for=" ">Ano</label>
-                                    <input type="text " name="ano" id="ano" value=" " class="form-control ">
+                                    <label for=" ">Ano da compra</label>
+                                    <input type="text " name="ano" id="ano" value="<?php echo date('Y'); ?>" class="form-control ">
                                 </div>
                             </div>
                             <div class="col-lg-5">
@@ -164,80 +163,30 @@ use src\Helper\Session;
                     </header>
                     <div class="content ">
                         <ul>
-                            <li class="lista-meus--cupons ">
-                                <div class="pull-left ">
-                                    <h6>Código</h6>
-                                    <strong>05522</strong>
-                                </div>
-                                <div class="pull-right ">
-                                    <h6>Entrada</h6>
-                                    <strong>22/04/2017</strong>
-                                </div>
-                            </li>
-                            <li class="lista-meus--cupons ">
-                                <div class="pull-left ">
-                                    <h6>Código</h6>
-                                    <strong>05522</strong>
-                                </div>
-                                <div class="pull-right ">
-                                    <h6>Entrada</h6>
-                                    <strong>22/04/2017</strong>
-                                </div>
-                            </li>
-                            <li class="lista-meus--cupons ">
-                                <div class="pull-left ">
-                                    <h6>Código</h6>
-                                    <strong>05522</strong>
-                                </div>
-                                <div class="pull-right ">
-                                    <h6>Entrada</h6>
-                                    <strong>22/04/2017</strong>
-                                </div>
-                            </li>
-                            <li class="lista-meus--cupons ">
-                                <div class="pull-left ">
-                                    <h6>Código</h6>
-                                    <strong>05522</strong>
-                                </div>
-                                <div class="pull-right ">
-                                    <h6>Entrada</h6>
-                                    <strong>22/04/2017</strong>
-                                </div>
-                            </li>
-                            <li class="lista-meus--cupons ">
-                                <div class="pull-left ">
-                                    <h6>Código</h6>
-                                    <strong>05522</strong>
-                                </div>
-                                <div class="pull-right ">
-                                    <h6>Entrada</h6>
-                                    <strong>22/04/2017</strong>
-                                </div>
-                            </li>
-                            <li class="lista-meus--cupons ">
-                                <div class="pull-left ">
-                                    <h6>Código</h6>
-                                    <strong>05522</strong>
-                                </div>
-                                <div class="pull-right ">
-                                    <h6>Entrada</h6>
-                                    <strong>22/04/2017</strong>
-                                </div>
-                            </li>
-                            <li class="lista-meus--cupons ">
-                                <div class="pull-left ">
-                                    <h6>Código</h6>
-                                    <strong>05522</strong>
-                                </div>
-                                <div class="pull-right ">
-                                    <h6>Entrada</h6>
-                                    <strong>22/04/2017</strong>
-                                </div>
-                            </li>
+                            <?php if(is_array($container['cupom'])){ ?>
+                                <?php foreach($container['cupom'] as $c){ ?>
+                                <li class="lista-meus--cupons ">
+                                    <div class="pull-left ">
+                                        <h6>Cupom</h6>
+                                        <strong><?php echo $c['numero']; ?></strong>
+                                    </div>
+                                    <div class="pull-right ">
+                                        <h6>Entrada</h6>
+                                        <strong><?php echo Original::formataData($c['created']); ?></strong>
+                                    </div>
+                                </li>
+                                <?php } ?>
+                            <?php }else{ ?>
+                                <li class="lista-meus--cupons ">
+                                    <div class="text-center">
+                                        <h3>Cadastre a nota fiscal somente com os produtos Estrela comprados para ganhar seus cupons.</h3>
+                                    </div>
+                                </li>
+                            <?php } ?>
                         </ul>
                     </div>
                     <footer>
-                        6 cupons
+                        <?php echo count($container['cupom']); ?> cupom(ns)
                     </footer>
                 </div>
             </div>

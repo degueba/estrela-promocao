@@ -21,21 +21,28 @@ class HomeController extends BaseController {
         $container = [];
         $container['retorno']['msg'] = '';
         $container['retorno']['sucesso'] = true;
-        $uf = !empty($post['uf'])?$post['uf']:null;
-        $lojaModel = new LojaModel();
-        $container['cidades'] = $lojaModel->findCidadesComLoja($uf);
+        if($request->method() == 'POST') {
+            $post = $request->paramsPost();
+            $uf = !empty($post['uf']) ? $post['uf'] : null;
+            $lojaModel = new LojaModel();
+            $container['cidades'] = $lojaModel->findCidadesComLoja($uf);
+        }
         $this->json($container);
     }
 
     public function getLojas($request, $response, $service)
     {
-        // FALTA IMPLEMENTAR
         $container = [];
         $container['retorno']['msg'] = '';
         $container['retorno']['sucesso'] = true;
-        $uf = !empty($post['uf'])?$post['uf']:null;
-        $lojaModel = new LojaModel();
-        $container['cidades'] = $lojaModel->findCidadesComLoja($uf);
+        if($request->method() == 'POST') {
+            $post = $request->paramsPost();
+            $loja = [];
+            $loja['uf'] = !empty($post['uf']) ? $post['uf'] : null;
+            $loja['cidade'] = !empty($post['cidade']) ? $post['cidade'] : null;
+            $lojaModel = new LojaModel();
+            $container['lojas'] = $lojaModel->findLoja($loja);
+        }
         $this->json($container);
     }
 
