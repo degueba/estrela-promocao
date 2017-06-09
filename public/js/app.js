@@ -257,6 +257,37 @@ jQuery(function() {
 
 
 
+    function getLojas(pg, qt, estado, cidade) {
+        params = { page: pg, qtd: qt };
+
+        $.ajax({
+            type: "POST",
+            url: "/getLojas",
+            data: params,
+            datatype: 'json',
+            success: function(data) {
+                console.log(data);
+            }, //END success
+            error: function(e) {
+                swal(
+                    'Erro',
+                    e,
+                    'error'
+                )
+            }
+
+        });
+    }
+
+
+    getLojas();
+
+
+
+
+
+
+
 
     // MOBILE \\
     $('.hamburguer').on("click", function() {
