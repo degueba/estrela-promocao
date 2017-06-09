@@ -4,9 +4,9 @@ namespace src\Model;
 
 class LojaModel extends BaseModel {
 
-    public function findLoja($loja)
+    public function findLoja($loja, $paginacao = null)
     {
-        $limit = false;
+        $limitOne = false;
         $sql = "SELECT
                 loja.id,
                 loja.nome,
@@ -18,22 +18,26 @@ class LojaModel extends BaseModel {
                 WHERE 1=1";
         if(!empty($loja['id'])){
             $sql .= " AND loja.id = ".$loja['id'];
-            $limit = true;
+            $limitOne = true;
         }
         if(!empty($loja['cnpj'])){
             $sql .= " AND loja.cnpj = '".$loja['cnpj']."'";
-            $limit = true;
+            $limitOne = true;
         }
         if(!empty($loja['uf'])){
             $sql .= " AND loja.uf = '".$loja['uf']."'";
-            $limit = true;
+            $limitOne = true;
         }
         if(!empty($loja['cidade'])){
             $sql .= " AND loja.cidade = '".$loja['cidade']."'";
-            $limit = true;
+            $limitOne = true;
         }
-        if($limit){
-            $sql .= " LIMIT 0,1";
+        if($paginacao){
+            $sql .= " LIMIT ".$paginacao['page'].','.$paginacao['qtd'];
+        }else{
+            if($limitOne){
+                $sql .= " LIMIT 0,1";
+            }
         }
         //echo $sql; die;
         $retorno = $this->DB->get_results($sql);

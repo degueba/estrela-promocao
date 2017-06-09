@@ -40,8 +40,9 @@ class HomeController extends BaseController {
             $loja = [];
             $loja['uf'] = !empty($post['uf']) ? $post['uf'] : null;
             $loja['cidade'] = !empty($post['cidade']) ? $post['cidade'] : null;
+            $paginacao = ['page'=>$post['page'],'qtd'=>$post['qtd']];
             $lojaModel = new LojaModel();
-            $container['lojas'] = $lojaModel->findLoja($loja);
+            $container['lojas'] = $lojaModel->findLoja($loja, $paginacao);
         }
         $this->json($container);
     }
