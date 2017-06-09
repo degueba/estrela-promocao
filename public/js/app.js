@@ -44,9 +44,60 @@ function removeProdutoEstrela(n) {
     $(n).remove();
 }
 
+// FILTROS LOJAS \\
+var PAGE = 1;
+
+function getLojas(pg, qt, estado, cidade) {
+
+    params = { page: pg, qtd: qt };
+
+    if (estado != "") {
+        params = { page: pg, qtd: qt, uf: estado };
+    }
+
+    if (cidade != "") {
+        params = { page: pg, qtd: qt, uf: estado, cidade: cidade };
+    }
+
+
+    $.ajax({
+        type: "POST",
+        url: "/getLojas",
+        data: params,
+        datatype: 'json',
+        success: function(data) {
+            console.log(data);
+            var container = $(".lojas-fisica");
+            var html = '<li class="box"><div class="content"></div></li>'
+
+
+            for (var i = 0; i < data.lojas.length; i++) {
+                var box = $(html).appendTo(container);
+                box.html("<h2>" + data.lojas[i].nome + "</h2>")[i];
+                box.append("<address class='end'>" + data.lojas[i].cidade + "," + data.lojas[i].estado + "</address>")[i];
+            }
+
+            if (data.lojas.length < 6) {
+                $(".btn-mais--lojas").hide();
+            }
+
+        }, //END success
+        error: function(e) {
+            swal(
+                'Erro',
+                e,
+                'error'
+            )
+        }
+
+    });
+}
+
+
 jQuery(function() {
     $("#telefone").mask("(99) 9999-9999?9");
     $("#cpf").mask("999.999.999-99");
+
 
     // PAGINA CUPOM
     if ($("body").hasClass("user-profile")) {
@@ -104,10 +155,6 @@ jQuery(function() {
         });
 
     }
-
-
-
-
 
 
 
@@ -233,54 +280,6 @@ jQuery(function() {
 
     // ||||||||||||||| \\
 
-
-    // FILTROS LOJAS \\
-
-    function getLojas(pg, qt, estado, cidade) {
-
-        params = { page: pg, qtd: qt };
-
-        if (estado != "") {
-            params = { page: pg, qtd: qt, uf: estado };
-        }
-
-        if (cidade != "") {
-            params = { page: pg, qtd: qt, uf: estado, cidade: cidade };
-        }
-
-
-        $.ajax({
-            type: "POST",
-            url: "/getLojas",
-            data: params,
-            datatype: 'json',
-            success: function(data) {
-                console.log(data);
-                var container = $(".lojas-fisica");
-                var html = '<li class="box"><div class="content"></div></li>'
-
-
-                for (var i = 0; i < data.lojas.length; i++) {
-                    var box = $(html).appendTo(container);
-                    box.addClass("box" + i);
-                    box.html("<h2>" + data.lojas[i].nome + "</h2>")[i];
-                    box.append("<address class='end'>" + data.lojas[i].cidade + "," + data.lojas[i].estado + "</address>")[i];
-                }
-
-
-            }, //END success
-            error: function(e) {
-                swal(
-                    'Erro',
-                    e,
-                    'error'
-                )
-            }
-
-        });
-    }
-
-
     $("#slt_estados").change(function() {
         var estado = $(this).val();
 
@@ -301,7 +300,6 @@ jQuery(function() {
 
                 $("#slt_cidades").html(options);
 
-
             }, //END success
             error: function(e) {
                 swal(
@@ -316,9 +314,29 @@ jQuery(function() {
 
     });
 
-    getLojas(1, 6);
 
+
+    // FILTRAR
     $(".btn-filtrar").click(function(event) {
+        event.preventDefault;
+        $(".lojas-fisica").html('');
+
+        var estado = $("#slt_estados option:selected").val();
+        var cidade = $("#slt_cidades option:selected").val();
+
+        if (estado != "") {
+            if (cidade != "") {
+                getLojas(0, 6, estado, cidade);
+            } else {
+                getLojas(0, 6, estado);
+            }
+        }
+
+
+    });
+
+    // MAIS LOJAS
+    $(".btn-mais--lojas").click(function(event) {
         event.preventDefault;
 
         var estado = $("#slt_estados option:selected").val();
@@ -326,9 +344,9 @@ jQuery(function() {
 
         if (estado != "") {
             if (cidade != "") {
-                getLojas(1, 6, estado, cidade);
+                getLojas(0, 6, estado, cidade);
             } else {
-                getLojas(1, 6, estado);
+                getLojas(0, 6, estado);
             }
         }
 
@@ -354,5 +372,7 @@ jQuery(function() {
     });
 
 
+
+    getLojas(0, 6);
 
 });
