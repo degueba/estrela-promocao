@@ -577,22 +577,25 @@ Original::loadBlock('head');
                             <div class="form-group">
                                 <label for="">Filtrar por</label>
                                 <div class="estado-select">
-                                    <select class="form-control">
-                                        <option value="" selected>Estado</option>
+                                    <select class="form-control" id="slt_estados">
+                                        <option value="">Estado</option>
+                                        <?php foreach($container["uf"] as $uf){ ?>
+                                             <option value="<?php echo $uf["uf"]; ?>"><?php echo $uf["uf"]; ?></option>
+                                        <?php } ?>
                                     </select>
                                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
                                 </div>
                             </div>
                             <div class="form-group"><br>
                                 <div class="cidade-select">
-                                    <select class="form-control">
+                                    <select class="form-control"  id="slt_cidades">
                                         <option value="" selected>Cidade</option>
                                     </select>
                                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
                                 </div>
                             </div>
                             <div class="form-group"><br>
-                                <button type="submit" class="btn btn-filtrar">Filtrar</button>
+                                <button type="button" class="btn btn-filtrar">Filtrar</button>
                             </div>
                         </form>
                     </div>

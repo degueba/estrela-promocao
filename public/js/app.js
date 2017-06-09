@@ -236,29 +236,18 @@ jQuery(function() {
 
     // FILTROS LOJAS \\
 
-    var lojas = [
-        { "nome": "Loja Rihappy", "endereco": "Rua Barão de São Francisco, 89 Rio de Janeiro - RJ" },
-        { "nome": "Loja Original", "endereco": "Rua Barão de São Januário, 89 São Paulo - SP" }
-    ]
-
-    var container = $(".lojas-fisica");
-    var html = '<li class="box"><div class="content"><h2 class="title"></h2><address class="end"></address></div></li>'
-
-
-    for (var i = 0; i < lojas.length; i++) {
-        var boxes = html;
-        var box = $(html).appendTo(container)[i];
-
-
-        $(boxes).each(function() {
-            console.log($(boxes).html("ok"));
-        })
-    }
-
-
-
     function getLojas(pg, qt, estado, cidade) {
+
         params = { page: pg, qtd: qt };
+
+        if (estado != "") {
+            params = { page: pg, qtd: qt, uf: estado };
+        }
+
+        if (cidade != "") {
+            params = { page: pg, qtd: qt, uf: estado, cidade: cidade };
+        }
+
 
         $.ajax({
             type: "POST",
@@ -267,6 +256,18 @@ jQuery(function() {
             datatype: 'json',
             success: function(data) {
                 console.log(data);
+                var container = $(".lojas-fisica");
+                var html = '<li class="box"><div class="content"></div></li>'
+
+
+                for (var i = 0; i < data.lojas.length; i++) {
+                    var box = $(html).appendTo(container);
+                    box.addClass("box" + i);
+                    box.html("<h2>" + data.lojas[i].nome + "</h2>")[i];
+                    box.append("<address class='end'>" + data.lojas[i].cidade + "," + data.lojas[i].estado + "</address>")[i];
+                }
+
+
             }, //END success
             error: function(e) {
                 swal(
@@ -280,7 +281,61 @@ jQuery(function() {
     }
 
 
-    getLojas();
+    $("#slt_estados").change(function() {
+        var estado = $(this).val();
+
+
+        $.ajax({
+            type: "POST",
+            url: "/getCidades",
+            data: { uf: estado },
+            datatype: 'json',
+            success: function(data) {
+                console.log(data);
+
+                var options = '';
+
+                for (var i = 0; i < data.cidades.length; i++) {
+                    options += '<option value="' + data.cidades[i].cidade + '">' + data.cidades[i].cidade + '</option>';
+                }
+
+                $("#slt_cidades").html(options);
+
+
+            }, //END success
+            error: function(e) {
+                swal(
+                    'Erro',
+                    e,
+                    'error'
+                )
+            }
+
+        });
+
+
+    });
+
+    getLojas(1, 6);
+
+    $(".btn-filtrar").click(function(event) {
+        event.preventDefault;
+
+        var estado = $("#slt_estados option:selected").val();
+        var cidade = $("#slt_cidades option:selected").val();
+
+        if (estado != "") {
+            if (cidade != "") {
+                getLojas(1, 6, estado, cidade);
+            } else {
+                getLojas(1, 6, estado);
+            }
+        }
+
+
+    });
+
+
 
 
 

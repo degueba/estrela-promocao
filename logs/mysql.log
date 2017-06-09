@@ -637,3 +637,12 @@
                 LEFT JOIN nota ON nota.id = cupom.nota_id
                 LEFT JOIN usuario ON usuario.id = cupom.usuario_id
                 WHERE 1=1 AND cupom.usuario_id = 46 [] []
+[2017-06-09 21:37:17] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 9 : SELECT
+                loja.id,
+                loja.nome,
+                loja.cnpj,
+                loja.uf,
+                loja.cidade
+                FROM
+                loja
+                WHERE 1=1 LIMIT , [] []
