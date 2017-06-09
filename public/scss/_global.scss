@@ -27,6 +27,99 @@ body {
     background-color: #00AEEF;
     font-size: 20px;
     font-family: 'omnes_regularregular';
+    @media screen and (max-width: $break-small) {
+        overflow-x: hidden;
+    }
+    // MENU MOBILE
+    .barra-sup {
+        height: 40px;
+        position: fixed;
+        /*Hasta q no pones el width, no sale la barra gris por culpa del position fixed y no tener ningun contenido dentro!*/
+        width: 55%;
+        .hamburguer {
+            display: inline-block;
+            margin-top: 15px;
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            span {
+                display: block;
+                width: 20px;
+                height: 3px;
+                margin: 3px;
+                background: #fff;
+            }
+        }
+    }
+    nav.nav-lateral-mobile {
+        position: absolute;
+        /*CRUZ*/
+        /*top: 40px;*/
+        padding-top: 20px;
+        /*CRUZ*/
+        background: #002B45;
+        width: 200px;
+        /*Como mide 200px de ancho, lo ocultas con un left negativo de los mismos pixeles*/
+        right: -200px;
+        transition: all .5s;
+        z-index: 9999;
+        top: 0;
+        /*CRUZ*/
+        height: 100%;
+        box-sizing: border-box;
+        &.mostrar {
+            right: 0;
+        }
+        .cruz {
+            margin-bottom: 20px;
+            cursor: pointer;
+            display: block;
+            padding-left: 15px;
+            span {
+                display: block;
+                width: 20px;
+                height: 3px;
+                background: #fff;
+                &:first-child {
+                    transform: rotate(45deg);
+                }
+                &:last-child {
+                    margin-top: -3px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        .img {
+            height: 100px;
+            background-image: url("https://source.unsplash.com/6g0KJWnBhxg");
+            background-size: cover;
+            background-position: center;
+        }
+        ul {
+            li {
+                margin: 2% 0;
+                // pares
+                &:nth-child(2n+0) {}
+                // impares
+                &:nth-child(2n+1) {
+                    border-top: 1px solid #264B61;
+                    border-bottom: 1px solid #264B61;
+                }
+                padding: 10px 0 10px 20px;
+                span {
+                    margin-right: 10%;
+                    font-size: 30px;
+                    color: #fff;
+                }
+                a {
+                    font-size: 14px;
+                    text-decoration: none;
+                    color: #9DACB6;
+                }
+            }
+        }
+    }
+    // ** \\
     // Header
     .navbar {
         background-color: #0067A8;
@@ -38,9 +131,19 @@ body {
         /* Safari */
         transition: .3s;
         transition-timing-function: ease;
+        @media screen and (max-width: $break-small) {
+            height: 55px;
+            padding: 3px;
+        }
         // Logo
         .navbar-brand {
             padding: 5px;
+            img {
+                @media screen and (max-width: $break-small) {
+                    width: 35px;
+                    float: none;
+                }
+            }
         }
         // Menu
         .navbar-nav {
@@ -111,11 +214,19 @@ body {
             color: #F6EE28;
             font-family: 'omnesbold';
             text-shadow: 1px 1px 5px #056a8e;
+            @media screen and (max-width: $break-small) {
+                font-size: 4rem;
+                text-align: center;
+                padding: 3px;
+            }
         }
         .subtitle {
             font-size: 2rem;
             font-family: 'omnes_regularregular';
             color: #fff;
+            @media screen and (max-width: $break-small) {
+                text-align: center;
+            }
         }
         .btn-participa,
         .btn-cadastre {
@@ -128,12 +239,25 @@ body {
         }
         .btn-participa {
             background-color: #B14599;
+            @media screen and (max-width: $break-small) {
+                width: 100%;
+            }
         }
         .btn-cadastre {
             background-color: #F38620;
+            @media screen and (max-width: $break-small) {
+                width: 100%;
+            }
         }
         .globo-promocao--volta---mundo {
             position: relative;
+            @media screen and (max-width: $break-small) {
+                width: 100%;
+                height: 290px;
+                img {
+                    top: 0;
+                }
+            }
             img {
                 position: absolute;
                 top: -70px;
@@ -154,13 +278,24 @@ body {
             &::first-letter {
                 text-transform: uppercase;
             }
+            @media screen and (max-width: $break-small) {
+                font-size: 4rem;
+                text-align: center;
+                padding: 3px;
+            }
         }
         .lista-processo--participa {
             display: flex;
             -webkit-flex-direction: row;
             text-align: center;
+            @media screen and (max-width: $break-small) {
+                flex-direction: column;
+            }
             li {
                 margin: 30px;
+                @media screen and (max-width: $break-small) {
+                    margin: 15px;
+                }
                 i.icon-estrela {
                     width: 220px;
                     height: 220px;
@@ -170,12 +305,33 @@ body {
                     color: #F38620;
                     display: block;
                     margin: 0 auto;
+                    @media screen and (max-width: $break-small) {
+                        width: 100px;
+                        height: 100px;
+                        float: left;
+                        text-align: right;
+                        position: relative;
+                        &::after {
+                            content: "...";
+                            position: absolute;
+                            left: 50px;
+                            bottom: -50px;
+                            font-size: 50px;
+                            color: #ff0;
+                            -ms-transform: rotate(90deg);
+                            -webkit-transform: rotate(90deg);
+                            transform: rotate(90deg);
+                        }
+                    }
                     &.icon-presente,
                     &.icon-compra,
                     &.icon-nota,
                     &.icon-viagem {
                         background-repeat: no-repeat;
                         margin: 0 0 20px 0;
+                        @media screen and (max-width: $break-small) {
+                            margin: 0 auto;
+                        }
                     }
                     &.icon-presente {
                         background-position: 3px 30px;
@@ -193,6 +349,21 @@ body {
                 span {
                     color: #fff;
                     font-family: 'omnes_regularregular';
+                    @media screen and (max-width: $break-small) {
+                        margin-left: 120px;
+                        display: block;
+                        width: 200px;
+                        text-align: left;
+                        font-size: 18px;
+                        word-wrap: break-word;
+                    }
+                }
+                &:last-child {
+                    i {
+                        &::after {
+                            content: "";
+                        }
+                    }
                 }
             }
         }
@@ -210,17 +381,31 @@ body {
         background-repeat: no-repeat;
         background-position: bottom;
         padding: 60px 0 350px 0;
+        @media screen and (max-width: $break-small) {
+            text-align: center;
+        }
         .graf-color {
             position: absolute;
             z-index: 2;
             left: 0;
             bottom: 0;
+            @media screen and (max-width: $break-small) {
+                width: 50%;
+                left: -60px;
+            }
         }
         .pega-varetas {
             position: absolute;
             z-index: 2;
             right: 490px;
             bottom: 0;
+            @media screen and (max-width: $break-small) {
+                position: absolute;
+                z-index: 999;
+                right: 10px;
+                bottom: 0;
+                width: 70%;
+            }
         }
         .bg-premios {
             position: absolute;
@@ -233,6 +418,11 @@ body {
             color: #F6EE28;
             text-shadow: 1px 1px 5px #056a8e;
             font-family: 'omnesbold';
+            @media screen and (max-width: $break-small) {
+                font-size: 4rem;
+                text-align: center;
+                padding: 3px;
+            }
         }
         h4.subtitle {
             font-family: 'omnesbold';
@@ -258,6 +448,11 @@ body {
             color: #F6EE28;
             text-shadow: 1px 1px 5px #056a8e;
             font-family: 'omnesbold';
+            @media screen and (max-width: $break-small) {
+                font-size: 4rem;
+                text-align: center;
+                padding: 3px;
+            }
         }
         .texto-regulamento {
             border-radius: 25px;
@@ -307,6 +502,11 @@ body {
             color: #F6EE28;
             text-shadow: 1px 1px 5px #056a8e;
             font-family: 'omnesbold';
+            @media screen and (max-width: $break-small) {
+                font-size: 4rem;
+                text-align: center;
+                padding: 3px;
+            }
         }
         h2.title-loja--fisica {
             color: #fff;
@@ -347,19 +547,25 @@ body {
                 /* Remove estilo padrão do FireFox*/
                 position: relative;
                 z-index: 2;
+                @media screen and (max-width: $break-small) {
+                    width: 100%;
+                }
             }
             button.btn-filtrar {
                 border-radius: 80px;
                 background-color: #F38620;
                 padding: 10px 30px;
                 font-size: 20px;
+                @media screen and (max-width: $break-small) {
+                    width: 100%;
+                }
             }
         }
         .lista-lojas {
             color: #2D739E;
             display: inline;
             .box {
-                width: 350px;
+                width: 100%;
                 height: 150px;
                 box-shadow: 1px 1px 1px #005893;
                 background-color: #fff;
@@ -371,18 +577,24 @@ body {
             &.lojas-online {
                 aside.left {
                     float: left;
-                    width: 50%;
+                    width: 60%;
                     figure {
                         padding: 25px;
+                        float: left;
+                    }
+                    h2 {
+                        margin: 55px;
+                        text-indent: 20px;
+                        float: left;
                     }
                 }
                 aside.right {
                     float: right;
-                    width: 50%;
+                    width: 15%;
                     height: 100%;
-                    padding-top: 20px;
-                    h2 {
-                        text-indent: 20px;
+                    padding-top: 60px;
+                    @media screen and (max-width: $break-small) {
+                        width: 40%;
                     }
                     a {
                         background-color: unset;
@@ -415,6 +627,9 @@ body {
             padding: 10px 30px;
             margin-top: 40px;
             font-size: 20px;
+            @media screen and (max-width: $break-small) {
+                width: 90%;
+            }
         }
     }
     // Seção contagem regressiva
@@ -426,6 +641,11 @@ body {
             color: #F6EE28;
             text-shadow: 1px 1px 5px #013354;
             font-family: 'omnesbold';
+            @media screen and (max-width: $break-small) {
+                font-size: 4rem;
+                text-align: center;
+                padding: 3px;
+            }
         }
         ul.cronometro {
             text-align: center;
@@ -433,8 +653,14 @@ body {
                 display: inline-block;
                 margin-left: 30px;
                 color: #fff;
+                @media screen and (max-width: $break-small) {
+                    margin-left: 15px;
+                }
                 h3 {
                     font-size: 7em;
+                    @media screen and (max-width: $break-small) {
+                        font-size: 2em;
+                    }
                     &.horas,
                     &.minutos {
                         &::after {
@@ -488,6 +714,9 @@ body {
                     margin-right: 22px;
                     margin-bottom: 0px;
                     text-align: center;
+                    @media screen and (max-width: $break-small) {
+                        margin-right: 5px;
+                    }
                     &:last-child {
                         margin-right: 0;
                     }
@@ -501,6 +730,9 @@ body {
                         font-size: 2em;
                         padding: 20px;
                         border: 0;
+                        @media screen and (max-width: $break-small) {
+                            font-size: 1em;
+                        }
                         &:hover,
                         &:active {
                             border: 0;
@@ -524,6 +756,9 @@ body {
                 padding: 50px;
                 font-family: 'omnesbold';
                 color: #fff;
+                @media screen and (max-width: $break-small) {
+                    min-height: 990px;
+                }
                 form {
                     color: #fff;
                     &#form-login {
@@ -554,6 +789,10 @@ body {
                         font-size: 1.7rem;
                         margin: 30px 20px 30px 0;
                         background-color: #D84800;
+                        @media screen and (max-width: $break-small) {
+                            width: 100%;
+                            padding: 15px 70px !important;
+                        }
                     }
                     button.btn-cadastrar {
                         padding: 15px 140px;
@@ -587,11 +826,17 @@ body {
     /// Rodapé Estrela
     .pageFooter {
         min-width: 1340px;
+        @media screen and (max-width: $break-small) {
+            min-width: 100%;
+        }
         #main-footer {
             float: left;
             width: 100%;
             height: 500px;
             background: #ff9527;
+            @media screen and (max-width: $break-small) {
+                height: 1000px;
+            }
             .area {
                 float: left;
                 display: block;
@@ -602,6 +847,9 @@ body {
                 }
                 .logo {
                     margin: 90px 0 0 39px;
+                    @media screen and (max-width: $break-small) {
+                        display: none;
+                    }
                     a {
                         font-size: 0;
                         display: inline-block;
@@ -615,6 +863,9 @@ body {
                     display: block;
                     margin-right: 1.53846%;
                     width: 49.23077%;
+                    @media screen and (max-width: $break-small) {
+                        width: 100%;
+                    }
                     &:last-child {
                         margin-right: 0
                     }
@@ -658,6 +909,9 @@ body {
                     }
                 }
                 &.feacture {
+                    @media screen and (max-width: $break-small) {
+                        width: 100%;
+                    }
                     .boxNewsletter {
                         background: url(../images/bgNewsFooter.jpg) no-repeat;
                         text-align: center;
@@ -779,6 +1033,12 @@ body {
                 margin-right: 1.53846%;
                 width: 57.69231%;
                 padding-top: 10px;
+                @media screen and (max-width: $break-small) {
+                    width: 100%;
+                    img {
+                        width: 100%;
+                    }
+                }
                 &:last-child {
                     margin-right: 0;
                 }
@@ -789,6 +1049,9 @@ body {
                 margin-right: 1.53846%;
                 width: 23.84615%;
                 padding-top: 10px;
+                @media screen and (max-width: $break-small) {
+                    width: 49.84615%;
+                }
                 &:last-child {
                     margin-right: 0;
                 }

@@ -11,13 +11,16 @@ Original::loadBlock('head');
     <section class="volta--mundo" id="inicio">
         <div class="container">
             <div class="row">
+                <div class="col-lg-6 col-xs-12 hidden-lg  globo-promocao--volta---mundo">
+                    <img src="images/globo_promocao_volta_ao_mundo.png" alt="" class="img-responsive">
+                </div>
                 <div class="col-lg-6">
                     <h1 class="title">prepare as malas e boa diversão</h1>
                     <h4 class="subtitle">Na promoção <strong>80 anos</strong> da Estrela comprando a partir de R$ 80,00 em <strong>brinquedos Estrela</strong> você ganha um Pega-Varetas exclusivo e ainda concorre a uma viagem incrível <strong>Volta ao Mundo</strong>  para duas pessoas com tudo pago.</h4>
                     <a href="#como-participar" class="scroll-suave btn btn-default btn-participa">Como participar</a>
                     <a href="#cadastro-ou-login" class="scroll-suave btn btn-default btn-cadastre">Cadastre-se</a>
                 </div>
-                <div class="col-lg-6 pull-right globo-promocao--volta---mundo">
+                <div class="col-lg-6 hidden-xs pull-right globo-promocao--volta---mundo">
                     <img src="images/globo_promocao_volta_ao_mundo.png" alt="">
                 </div>
             </div>
@@ -27,10 +30,10 @@ Original::loadBlock('head');
     <section class="veja--comoparticipar" id="como-participar">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12 col-xs-12">
                     <h1 class="title">veja como participar</h1>
                     <ul class="lista-processo--participa">
-                        <li><i class="icon-estrela icon-presente"></i><span>Comre brinquedos Estrela nas lojas participantes</span></li>
+                        <li><i class="icon-estrela icon-presente"></i><span>Compre brinquedos Estrela nas lojas participantes</span></li>
                         <li><i class="icon-estrela icon-compra"></i><span>A cada R$80 em compras de produtos Estrela, você ganha um pega varetas e um número da sorte</span></li>
                         <li><i class="icon-estrela icon-nota"></i><span>Preencha os campos do formulário de cadastro aqui no site da promoção</span></li>
                         <li><i class="icon-estrela icon-viagem"></i><span>Comece a torcida! <br>O resultado será divulgado dia<br> 16 de agosto</span></li>
@@ -48,7 +51,7 @@ Original::loadBlock('head');
                 <img src="images/graf_color_premios.png" alt="" class="graf-color pull-left">
                 <img src="images/bg_premios.png" alt="" class="bg-premios">
 
-                <div class="col-lg-6 col-lg-offset-6">
+                <div class="col-lg-6 col-lg-offset-6 col-xs-12">
                     <h4 class="subtitle">Que tal dar a volta ao mundo com tudo pago? </h4>
                     <p>O vencedor da promoção ganha 1 (um) prêmio de <strong>R$40.000,00</strong> (quarenta mil reais), entregue em forma de pacote de viagem nacional ou internacional, e pode escolher o(s) destino(s) para viajar sozinho ou acompanhado.
                         <br>Participe!<br><br> Saiba mais sobre a entrega do prêmio no regulamento abaixo.</p>
@@ -559,64 +562,9 @@ Original::loadBlock('head');
                                 <figure>
                                     <img src="http://via.placeholder.com/100x100" alt="..." class="img-circle">
                                 </figure>
-                            </aside>
-                            <aside class="right">
                                 <h2>Loja 1</h2>
-                                <a class="btn btn-primary">Entrar</a>
-                            </aside>
-                        </li>
-                        <li class="box">
-                            <aside class="left">
-                                <figure>
-                                    <img src="http://via.placeholder.com/100x100" alt="..." class="img-circle">
-                                </figure>
                             </aside>
                             <aside class="right">
-                                <h2>Loja 2</h2>
-                                <a class="btn btn-primary">Entrar</a>
-                            </aside>
-                        </li>
-                        <li class="box">
-                            <aside class="left">
-                                <figure>
-                                    <img src="http://via.placeholder.com/100x100" alt="..." class="img-circle">
-                                </figure>
-                            </aside>
-                            <aside class="right">
-                                <h2>Loja 3</h2>
-                                <a class="btn btn-primary">Entrar</a>
-                            </aside>
-                        </li>
-                        <li class="box">
-                            <aside class="left">
-                                <figure>
-                                    <img src="http://via.placeholder.com/100x100" alt="..." class="img-circle">
-                                </figure>
-                            </aside>
-                            <aside class="right">
-                                <h2>Loja 4</h2>
-                                <a class="btn btn-primary">Entrar</a>
-                            </aside>
-                        </li>
-                        <li class="box">
-                            <aside class="left">
-                                <figure>
-                                    <img src="http://via.placeholder.com/100x100" alt="..." class="img-circle">
-                                </figure>
-                            </aside>
-                            <aside class="right">
-                                <h2>Loja 5</h2>
-                                <a class="btn btn-primary">Entrar</a>
-                            </aside>
-                        </li>
-                        <li class="box">
-                            <aside class="left">
-                                <figure>
-                                    <img src="http://via.placeholder.com/100x100" alt="..." class="img-circle">
-                                </figure>
-                            </aside>
-                            <aside class="right">
-                                <h2>Loja 6</h2>
                                 <a class="btn btn-primary">Entrar</a>
                             </aside>
                         </li>
@@ -650,46 +598,7 @@ Original::loadBlock('head');
                         </form>
                     </div>
                     <ul class="lista-lojas lojas-fisica">
-                        <li class="box">
-                            <div class="content">
-                                <h2 class="title">
-                                    Loja Ri happy
-                                </h2>
-                                <address>Rua Barão de São Francisco, 89 <br> Rio de Janeiro - RJ</address>
-                            </div>
-                        </li>
-                        <li class="box">
-                            <div class="content">
-                                <h2 class="title">
-                                    Loja Ri happy
-                                </h2>
-                                <address>Rua Barão de São Francisco, 89 <br> Rio de Janeiro - RJ</address>
-                            </div>
-                        </li>
-                        <li class="box">
-                            <div class="content">
-                                <h2 class="title">
-                                    Loja Ri happy
-                                </h2>
-                                <address>Rua Barão de São Francisco, 89 <br> Rio de Janeiro - RJ</address>
-                            </div>
-                        </li>
-                        <li class="box">
-                            <div class="content">
-                                <h2 class="title">
-                                    Loja Ri happy
-                                </h2>
-                                <address>Rua Barão de São Francisco, 89 <br> Rio de Janeiro - RJ</address>
-                            </div>
-                        </li>
-                        <li class="box">
-                            <div class="content">
-                                <h2 class="title">
-                                    Loja Ri happy
-                                </h2>
-                                <address>Rua Barão de São Francisco, 89 <br> Rio de Janeiro - RJ</address>
-                            </div>
-                        </li>
+                        
                     </ul>
 
                 </div>
@@ -703,7 +612,7 @@ Original::loadBlock('head');
         <div class="container">
             <div class="row">
                 <h1 class="title text-center">Contagem Regressiva para o sorteio</h1>
-                <div class="col-lg-12">
+                <div class="col-lg-12 col-xs-12">
                     <ul class="cronometro">
                         <li>
                             <h3 id="dias">45</h3>
@@ -747,54 +656,54 @@ Original::loadBlock('head');
                         <div role="tabpanel" class="tab-pane active" id="cadastrar">
                             <form id="form-cadastro" method="POST">
                                 
-                                <div class="col-lg-12">
+                                <div class="col-lg-12 col-xs-12">
                                     <div class="form-group">
                                         <label for="">Nome completo</label>
                                         <input type="text" class="form-control" name="nome">
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-xs-12">
                                     <div class="form-group">
                                         <label for="">Cpf</label>
                                         <input type="text" class="form-control" name="cpf" id="cpf" required>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-xs-12">
                                     <div class="form-group">
                                         <label for="">Telefone (com DDD)</label>
                                         <input type="text" class="form-control" name="telefone" id="telefone" required>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-xs-12">
                                     <div class="form-group">
                                         <label for="">Email</label>
                                         <input type="email" class="form-control" name="email" id="email" onblur="camposIguais('email_confirm', this.id, 'Campos de email diferentes')" required="required">
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-xs-12">
                                     <div class="form-group">
                                         <label for="">Confirmar email</label>
                                         <input type="text" class="form-control" name="email_confirm" id="email_confirm" onblur="camposIguais('email', this.id, 'Campos de email diferentes')" required>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-xs-12">
                                     <div class="form-group">
                                         <label for="">Senha</label>
                                         <input type="password" class="form-control" name="senha" id="senha" onblur="camposIguais('senha_confirm', this.id, 'Campos de senha diferentes')" required>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-xs-12">
                                     <div class="form-group">
                                         <label for="">Confirmar senha</label>
                                         <input type="password" class="form-control" name="senha_confirm" id="senha_confirm" onblur="camposIguais('senha', this.id, 'Campos de senha diferentes')" required>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-xs-12">
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox" required name="regulamento" oninvalid="sweetAlert('Atenção', 'Você só poderá continuar se concordar com os termos do regulamento!', 'error')"> Li o <u>regulamento</u> e concordo com os termos
@@ -803,7 +712,7 @@ Original::loadBlock('head');
 
                                     <small>Todos os campos são de preenchimento obrigatório</small>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-xs-12">
                                     <button type="submit" id="cadastrar-usuario" class="btn btn-default btn-cadastrar pull-right">Cadastrar</button>
                             
                                 </div>

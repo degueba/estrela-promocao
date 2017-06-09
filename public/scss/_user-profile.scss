@@ -26,7 +26,7 @@ body.user-profile {
         border-radius: 20px;
         background-color: #fff;
         height: auto;
-        min-height: 490px;
+        min-height: 525px;
         margin: 0 0 20px;
         .help-msg {
             font-size: 12px;
@@ -62,7 +62,7 @@ body.user-profile {
         // AQUI COMEÇAM OS ESPECÍFICOS
         &.cadastrar-nota {
             #form-cadastrar-nota {
-                height: 379px;
+                height: 415px;
                 overflow-y: auto;
                 padding-bottom: 20px;
                 .produto_estrela {

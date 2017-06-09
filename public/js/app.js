@@ -25,7 +25,7 @@ var x = setInterval(function() {
     // If the count down is over, write some text 
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
+        //        document.getElementById("demo").innerHTML = "EXPIRED";
     }
 }, 1000);
 
@@ -59,6 +59,7 @@ jQuery(function() {
             decimal: ",",
             thousands: "."
         });
+        $("#cnpj").mask("99.999.999/9999-99");
         // ** \\
 
 
@@ -129,6 +130,12 @@ jQuery(function() {
 
     // Scroll nav header
     $(window).scroll(function() {
+        // Menu mobile
+        if ($('nav.nav-lateral-mobile').hasClass('mostrar')) {
+            $('nav.nav-lateral-mobile').removeClass('mostrar');
+        }
+
+
         var $this = $(this),
             $navHeader = $("#menu-nav");
 
@@ -225,6 +232,40 @@ jQuery(function() {
     });
 
     // ||||||||||||||| \\
+
+
+    // FILTROS LOJAS \\
+
+    var lojas = [
+        { "nome": "Loja Rihappy", "endereco": "Rua Barão de São Francisco, 89 Rio de Janeiro - RJ" },
+        { "nome": "Loja Original", "endereco": "Rua Barão de São Januário, 89 São Paulo - SP" }
+    ]
+
+    var container = $(".lojas-fisica");
+    var html = '<li class="box"><div class="content"><h2 class="title"></h2><address class="end"></address></div></li>'
+
+
+    for (var i = 0; i < lojas.length; i++) {
+        var boxes = html;
+        var box = $(html).appendTo(container)[i];
+
+
+        $(boxes).each(function() {
+            console.log($(boxes).html("ok"));
+        })
+    }
+
+
+
+
+    // MOBILE \\
+    $('.hamburguer').on("click", function() {
+        $('nav.nav-lateral-mobile').toggleClass("mostrar");
+    });
+
+    $('.cruz').on("click", function() {
+        $('nav.nav-lateral-mobile').removeClass('mostrar');
+    });
 
 
 
