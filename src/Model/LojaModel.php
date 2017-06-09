@@ -10,7 +10,9 @@ class LojaModel extends BaseModel {
         $sql = "SELECT
                 loja.id,
                 loja.nome,
-                loja.cnpj
+                loja.cnpj,
+                loja.uf,
+                loja.cidade
                 FROM
                 loja
                 WHERE 1=1";
@@ -20,6 +22,14 @@ class LojaModel extends BaseModel {
         }
         if(!empty($loja['cnpj'])){
             $sql .= " AND loja.cnpj = '".$loja['cnpj']."'";
+            $limit = true;
+        }
+        if(!empty($loja['uf'])){
+            $sql .= " AND loja.uf = '".$loja['uf']."'";
+            $limit = true;
+        }
+        if(!empty($loja['cidade'])){
+            $sql .= " AND loja.cidade = '".$loja['cidade']."'";
             $limit = true;
         }
         if($limit){

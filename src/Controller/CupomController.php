@@ -36,7 +36,13 @@ class CupomController extends BaseController {
                     if($valorProdutos >= VALOR_GASTO_POR_CUPOM){
                         // Pegar dados da loja
                         $loja = [];
-                        $loja['cnpj'] = $post['cnpj'];
+                        $loja['cnpj'] = preg_replace('/[^-9]/', '', $post['cnpj']);
+                        if(!empty($post['uf'])){
+                            $loja['uf'] = $post['uf'];
+                        }
+                        if(!empty($post['cidade'])){
+                            $loja['cidade'] = $post['cidade'];
+                        }
                         $lojaModel = new LojaModel();
                         $retornoLoja = $lojaModel->findLoja($loja);
                         if($retornoLoja){
