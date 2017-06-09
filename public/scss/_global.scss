@@ -622,6 +622,9 @@ body {
             &.lojas-fisica {
                 .box {
                     width: 300px;
+                    @media screen and (max-width: $break-small) {
+                        width: 100%;
+                    }
                     .content {
                         padding: 20px;
                         h2 {
