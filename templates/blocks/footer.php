@@ -1,9 +1,41 @@
 <footer class="pageFooter">
     <div id="main-footer" class="container">
+        <!--MOBILE AND TABLET ONLY-->
+        <div class="area feacture hidden-lg">
+            <div class="boxNewsletter">
+                <h3>Promoções e novidades</h3>
+                <div class="newsletter" id="NewsLetter_9f204d9d_df1f_4f47_b236_320f5b5cbb16">
+                    <h3 class="newsletter-title">novidades</h3>
+                    <fieldset>
+                        <p>Promoções e novidades!</p><input id="newsletterClientName" onfocus="newsSelect(this,'Digite seu nome');" onblur="newsLeave(this,'Digite seu nome');" class="newsletter-client-name" value="Digite seu nome" size="20" type="text"
+                                                            name="newsClientName"><input id="newsletterClientEmail" onfocus="newsSelect(this,'Digite seu e-mail');" onblur="newsLeave(this,'Digite seu e-mail');" class="newsletter-client-email" value="Digite seu e-mail" size="20" type="text"
+                                                                                         name="newsletterClientEmail"><input id="newsletterButtonOK" class="btn-ok newsletter-button-ok" value="ok" type="button" name="newsletterButtonOK" onclick="newsButtonClick('NewsLetter_9f204d9d_df1f_4f47_b236_320f5b5cbb16')">
+                        <input id="newsletterLoading" type="hidden" class="newsletter-loading" value="Processando..."><input id="newsletterSuccess" type="hidden" class="newsletter-success" value="Obrigado por se cadastrar na Loja da Estrela!">
+                        <input id="newsletterSuccess2" type="hidden" class="newsletter-success2" value="Em breve entraremos em contato com você para oferecer as melhores promoções.">
+                        <input id="newsletterError" type="hidden" class="newsletter-error" value="
+    Encontramos um erro no cadastro de suas informações.<br />Por favor, tente novamente!
+  "><input id="newsInternalPage" type="hidden" value="_"><input id="newsInternalPart" type="hidden" value="newsletter"><input id="newsInternalCampaign" type="hidden" value="newsletter:opt-in"></fieldset><span class="rt"></span>
+                    <span class="rb"></span><span class="lb"></span><span class="lt"></span></div>
+            </div>
+            <div class="socialMedia">
+                <h3>Siga estrela</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/BrinquedosEstrela/" target="_blank" class="ico-social facebook"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/user/brinquedosestrela" target="_blank" class="ico-social youtube"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!---->
+
         <div class="area">
             <div class="logo"><a href="" title="estrela" class="logoImg">estrela</a></div>
             <!--/logo-->
         </div>
+        
         <div class="area linksFooter">
             <div>
                 <h3><a href="/atendimento/central-atendimento" title="Atendimento">Atendimento</a></h3>
@@ -37,7 +69,7 @@
                 </ul>
             </div>
         </div>
-        <div class="area feacture">
+        <div class="area feacture hidden-xs">
             <div class="boxNewsletter">
                 <h3>Promoções e novidades</h3>
                 <div class="newsletter" id="NewsLetter_9f204d9d_df1f_4f47_b236_320f5b5cbb16">

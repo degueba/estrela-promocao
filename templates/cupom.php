@@ -64,7 +64,7 @@ use src\Helper\Session;
                     <header>
                         <h3 class="title pull-left ">Cadastrar Nota Fiscal</h3> <small class="pull-right "> <i class="fa fa-warning "></i> Cadastre somente produtos Estrela</small>
                     </header>
-                    <form class="col-lg-12" id="form-cadastrar-nota">
+                    <form action="" method="post" class="col-lg-12" id="form-cadastrar-nota">
                        
                         <div class="form-group ">
                             <div>
@@ -90,7 +90,7 @@ use src\Helper\Session;
                         <div class="form-group ">
                             <div class="col-lg-6">
                                 <label for=" ">CNPJ da Loja</label>
-                                <input type="text " name="cnpj" value=" " class="form-control ">
+                                <input type="text " name="cnpj" id="cnpj" value=" " class="form-control ">
                             </div>
                         </div>
                         <div class="form-group ">
@@ -114,7 +114,7 @@ use src\Helper\Session;
                         <div class="form-group">
                             <div class="produto_estrela">
                                 <div class="col-lg-6 nome_produto">
-                                    <label for=" ">Produto(s) Estrela comprados</label>
+                                    <label for=" ">Produto Estrela comprado</label>
                                     <input type="text " name="produto[]" value=" " class="form-control ">
                                 </div>
                                 <div class="col-lg-6 valor_produto">
@@ -130,7 +130,7 @@ use src\Helper\Session;
                         </div>
                         <div class="form-group ">
                             <div class="col-lg-8 ">
-                                <button class="pull-right btn btn-cadastrar ">Cadastrar</button>
+                                <button type="submit" class="pull-right btn btn-cadastrar ">Cadastrar</button>
                             </div>
                             <small class="pull-right help-msg ">* Somente para lojas físicas</small>
                             <small class="pull-right help-msg ">** Somente para lojas online</small>
@@ -141,7 +141,7 @@ use src\Helper\Session;
                     <div class="col-lg-12 ">
                         <div class="box-user meu-perfil ">
                             <header>
-                                <h3 class="title pull-left ">Meu Perfil</h3> <small class="pull-right "> <a class="btn btn-default btn-edit--perfil ">Editar Perfil</a></small>
+                                <h3 class="title pull-left ">Meu Perfil</h3> <small class="pull-right ">  <!-- a class="btn btn-default btn-edit--perfil ">Editar Perfil</a --></small>
                             </header>
                             <div class="content ">
                                 <ol class="lista-editar--perfil ">
