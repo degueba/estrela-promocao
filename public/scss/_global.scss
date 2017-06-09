@@ -331,19 +331,32 @@ body {
                         margin: 0 0 20px 0;
                         @media screen and (max-width: $break-small) {
                             margin: 0 auto;
+                            background-size: cover;
                         }
                     }
                     &.icon-presente {
                         background-position: 3px 30px;
+                        @media screen and (max-width: $break-small) {
+                            background-position: -19px -3px;
+                        }
                     }
                     &.icon-compra {
                         background-position: -196px 29px;
+                        @media screen and (max-width: $break-small) {
+                            background-position: -148px -3px;
+                        }
                     }
                     &.icon-nota {
                         background-position: -393px 40px;
+                        @media screen and (max-width: $break-small) {
+                            background-position: -289px 1px;
+                        }
                     }
                     &.icon-viagem {
                         background-position: -580px 44px;
+                        @media screen and (max-width: $break-small) {
+                            background-position: -405px 9px;
+                        }
                     }
                 }
                 span {
@@ -608,6 +621,7 @@ body {
             /*--LOJAS FÍSICAS--*/
             &.lojas-fisica {
                 .box {
+                    width: 300px;
                     .content {
                         padding: 20px;
                         h2 {

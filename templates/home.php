@@ -1,9 +1,8 @@
 <?php
 use src\Helper\Original;
 Original::loadBlock('head');
+
 ?>
-
-
     <!--SECTIONS-->
 
 
