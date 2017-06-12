@@ -7,6 +7,16 @@ body.user-profile {
             li {
                 padding-top: 10px !important;
             }
+            @media screen and (max-width: $break-small) {
+                width: 80%;
+                .title-promocao--volta---mundo {
+                    a {
+                        font-size: 15px;
+                        margin-top: -10px;
+                        margin-left: -10px;
+                    }
+                }
+            }
         }
     }
     .title-promocao--volta---mundo {
@@ -37,6 +47,9 @@ body.user-profile {
             height: 90px;
             margin-bottom: 20px;
             padding: 15px 35px;
+            @media screen and (max-width: $break-small) {
+                height: 160px;
+            }
             .title {
                 font-family: 'omnes_regularregular';
                 color: #FB7314;
@@ -67,11 +80,20 @@ body.user-profile {
                 padding-bottom: 20px;
                 .produto_estrela {
                     width: 100%;
+                    @media screen and (max-width: $break-small) {
+                        float: left;
+                    }
+                }
+                @media screen and (max-width: $break-small) {
+                    height: 330px;
                 }
             }
             .btn-add-produto {
                 border: none;
                 margin-top: 20px;
+                @media screen and (max-width: $break-small) {
+                    margin-bottom: 20px;
+                }
                 color: #737373;
                 i.fa-plus {
                     color: #fff;
@@ -89,6 +111,9 @@ body.user-profile {
                 padding: 8px 60px;
                 color: #fff;
                 border-radius: 20px;
+                @media screen and (max-width: $break-small) {
+                    margin-bottom: 20px;
+                }
             }
             .input-group-addon {
                 background-color: unset;
@@ -101,6 +126,11 @@ body.user-profile {
             height: 600px;
             .title {
                 color: #04466F
+            }
+            header {
+                @media screen and (max-width: $break-small) {
+                    height: 90px;
+                }
             }
             .content {
                 overflow-y: scroll;
@@ -146,6 +176,9 @@ body.user-profile {
         }
         &.meu-perfil {
             header {
+                @media screen and (max-width: $break-small) {
+                    height: 90px;
+                }
                 .title {
                     color: #006FB4;
                 }

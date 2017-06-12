@@ -561,9 +561,10 @@ Original::loadBlock('head');
                                 <figure>
                                     <img src="http://via.placeholder.com/100x100" alt="..." class="img-circle">
                                 </figure>
-                                <h2>Loja 1</h2>
+                                <h2 class="hidden-xs">Loja 1</h2>
                             </aside>
                             <aside class="right">
+                                <h2 class="visible-xs">Loja 1</h2>
                                 <a class="btn btn-primary">Entrar</a>
                             </aside>
                         </li>
@@ -667,7 +668,7 @@ Original::loadBlock('head');
 
                                 <div class="col-lg-6 col-xs-12">
                                     <div class="form-group">
-                                        <label for="">Cpf</label>
+                                        <label for="">CPF</label>
                                         <input type="text" class="form-control" name="cpf" id="cpf" required>
                                     </div>
                                 </div>
@@ -708,7 +709,7 @@ Original::loadBlock('head');
                                 <div class="col-lg-6 col-xs-12">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" required name="regulamento" oninvalid="sweetAlert('Atenção', 'Você só poderá continuar se concordar com os termos do regulamento!', 'error')"> Li o <u>regulamento</u> e concordo com os termos
+                                            <input type="checkbox" required id="caixa-regulamento" name="regulamento" oninvalid="sweetAlert('Atenção', 'Você só poderá continuar se concordar com os termos do regulamento!', 'error')"> Li o <u>regulamento</u> e concordo com os termos
                                         </label>
                                     </div>
 

@@ -608,6 +608,7 @@ body {
                     padding-top: 60px;
                     @media screen and (max-width: $break-small) {
                         width: 40%;
+                        padding-top: 10px;
                     }
                     a {
                         background-color: unset;

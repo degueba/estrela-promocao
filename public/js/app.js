@@ -107,6 +107,7 @@ jQuery(function() {
     $("#cpf").mask("999.999.999-99");
 
 
+
     // PAGINA CUPOM
     if ($("body").hasClass("user-profile")) {
 
@@ -244,6 +245,16 @@ jQuery(function() {
 
     });
     // ||||||||||||||| \\
+
+
+    // CHECKBOX REGULAMENTO \\
+    $("#caixa-regulamento").change(function() {
+        if ($(this).is(":checked")) {
+            $('html, body').animate({
+                scrollTop: $("#regulamento").offset().top
+            }, 2000);
+        }
+    });
 
 
     // LOGIN \\
