@@ -46,6 +46,7 @@ function removeProdutoEstrela(n) {
 
 // FILTROS LOJAS \\
 var PAGE = 1;
+var PAGE_ITENS = 6;
 
 function getLojas(pg, qt, estado, cidade) {
 
@@ -70,16 +71,23 @@ function getLojas(pg, qt, estado, cidade) {
             var container = $(".lojas-fisica");
             var html = '<li class="box"><div class="content"></div></li>'
 
+            if (data.lojas) {
+                for (var i = 0; i < data.lojas.length; i++) {
+                    var box = $(html).appendTo(container);
+                    box.html("<h2>" + data.lojas[i].nome + "</h2>")[i];
+                    box.append("<address class='end'>" + data.lojas[i].cidade + "," + data.lojas[i].estado + "</address>")[i];
+                }
 
-            for (var i = 0; i < data.lojas.length; i++) {
-                var box = $(html).appendTo(container);
-                box.html("<h2>" + data.lojas[i].nome + "</h2>")[i];
-                box.append("<address class='end'>" + data.lojas[i].cidade + "," + data.lojas[i].estado + "</address>")[i];
-            }
-
-            if (data.lojas.length < 6) {
+                if (data.lojas.length < 6) {
+                    $(".btn-mais--lojas").hide();
+                }
+            } else {
                 $(".btn-mais--lojas").hide();
             }
+
+
+
+            PAGE++;
 
         }, //END success
         error: function(e) {
@@ -282,7 +290,12 @@ jQuery(function() {
 
     $("#slt_estados").change(function() {
         var estado = $(this).val();
+        var estadoOption = $("#slt_estados option:selected").val();
 
+        if (estadoOption == "") {
+            $("#slt_cidades").html("<option value=''>Cidade</option>");
+            return;
+        }
 
         $.ajax({
             type: "POST",
@@ -290,9 +303,10 @@ jQuery(function() {
             data: { uf: estado },
             datatype: 'json',
             success: function(data) {
-                console.log(data);
 
                 var options = '';
+
+
 
                 for (var i = 0; i < data.cidades.length; i++) {
                     options += '<option value="' + data.cidades[i].cidade + '">' + data.cidades[i].cidade + '</option>';
@@ -320,15 +334,17 @@ jQuery(function() {
     $(".btn-filtrar").click(function(event) {
         event.preventDefault;
         $(".lojas-fisica").html('');
+        PAGE = 1;
+        $(".btn-mais--lojas").show();
 
         var estado = $("#slt_estados option:selected").val();
         var cidade = $("#slt_cidades option:selected").val();
 
         if (estado != "") {
             if (cidade != "") {
-                getLojas(0, 6, estado, cidade);
+                getLojas(PAGE, PAGE_ITENS, estado, cidade);
             } else {
-                getLojas(0, 6, estado);
+                getLojas(PAGE, PAGE_ITENS, estado);
             }
         }
 
@@ -337,16 +353,19 @@ jQuery(function() {
 
     // MAIS LOJAS
     $(".btn-mais--lojas").click(function(event) {
+
         event.preventDefault;
 
         var estado = $("#slt_estados option:selected").val();
         var cidade = $("#slt_cidades option:selected").val();
 
-        if (estado != "") {
+        if (estado == "") {
+            getLojas(PAGE, PAGE_ITENS);
+        } else {
             if (cidade != "") {
-                getLojas(0, 6, estado, cidade);
+                getLojas(PAGE, PAGE_ITENS, estado, cidade);
             } else {
-                getLojas(0, 6, estado);
+                getLojas(PAGE, PAGE_ITENS, estado);
             }
         }
 
@@ -373,6 +392,6 @@ jQuery(function() {
 
 
 
-    getLojas(0, 6);
+    getLojas(PAGE, PAGE_ITENS);
 
 });
