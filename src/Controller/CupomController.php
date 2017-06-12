@@ -100,7 +100,7 @@ class CupomController extends BaseController {
                             }
                         }else{
                             $container['retorno']['sucesso'] = false;
-                            $container['retorno']['msg'] = 'A loja informada não particida da promoção! Verifique o CNPJ digitado.';
+                            $container['retorno']['msg'] = 'A loja informada não participa da promoção! Verifique o CNPJ digitado.';
                         }
                     }else{
                         $container['retorno']['sucesso'] = false;
