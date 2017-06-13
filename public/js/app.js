@@ -248,12 +248,10 @@ jQuery(function() {
 
 
     // CHECKBOX REGULAMENTO \\
-    $("#caixa-regulamento").change(function() {
-        if ($(this).is(":checked")) {
-            $('html, body').animate({
-                scrollTop: $("#regulamento").offset().top
-            }, 2000);
-        }
+    $("#caixa-regulamento").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#regulamento").offset().top
+        }, 2000);
     });
 
 
