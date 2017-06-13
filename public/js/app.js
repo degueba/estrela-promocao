@@ -75,7 +75,7 @@ function getLojas(pg, qt, estado, cidade) {
                 for (var i = 0; i < data.lojas.length; i++) {
                     var box = $(html).appendTo(container);
                     box.html("<h2>" + data.lojas[i].nome + "</h2>")[i];
-                    box.append("<address class='end'>" + data.lojas[i].cidade + "," + data.lojas[i].estado + "</address>")[i];
+                    box.append("<address class='end'>" + data.lojas[i].cidade + ", " + data.lojas[i].uf + "</address>")[i];
                 }
 
                 if (data.lojas.length < 6) {
