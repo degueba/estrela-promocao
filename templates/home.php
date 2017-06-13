@@ -428,7 +428,11 @@ Original::loadBlock('head');
                             <small>segundos</small>
                         </li>
                     </ul>
-                    <p class="text-center texto-informativo">Cadastre-se até o dia 30 de julho</p>
+                    <p class="text-center texto-informativo">
+                        Cadastre-se até o dia 30 de julho
+                    </p>
+
+                    <small class="text-center msg-dia-sorteio">O sorteio acontecerá no dia <strong> 16/08/2017 às 19:15 </strong> (horário de Brasília).</small>
                 </div>
 
             </div>
@@ -503,7 +507,7 @@ Original::loadBlock('head');
                                 <div class="col-lg-6 col-xs-12">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" required id="caixa-regulamento" name="regulamento" oninvalid="sweetAlert('Atenção', 'Você só poderá continuar se concordar com os termos do regulamento!', 'error')"> Li o <u>regulamento</u> e concordo com os termos
+                                            <input type="checkbox" required name="regulamento" oninvalid="sweetAlert('Atenção', 'Você só poderá continuar se concordar com os termos do regulamento!', 'error')"> Li o <u  id="caixa-regulamento">regulamento</u> e concordo com os termos
                                         </label>
                                     </div>
 
@@ -529,7 +533,9 @@ Original::loadBlock('head');
                                         <label for="">Senha</label>
                                         <input type="password" name="senha" class="form-control">
                                     </div>
-                                    <div class="text-center"><a href="" class="link-esqueci--senha">Esqueci minha senha :(</a></div>
+                                    <div class="text-center">
+                                        <a href="#" id="" data-toggle="modal" data-target="#esqueci-senha-modal" class="link-esqueci--senha">Esqueci minha senha :(</a>
+                                    </div>
                                     <button type="submit" id="entrar-usuario" class="center-block btn-block btn btn-default btn-login">Entrar</button>
                                     
                                 </form>
@@ -541,6 +547,36 @@ Original::loadBlock('head');
             </div>
         </div>
     </section>
+
+
+
+<!-- Modal ESQUECI MINHA SENHA -->
+<div id="esqueci-senha-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Esqueci minha senha</h4>
+      </div>
+      <div class="modal-body">
+          <form class="row" id="form-esqueci-minha-senha" method="post">
+              <div class="col-lg-12">
+                <div class="form-group">
+                    <input type="text" class="form-control" required="required" name="email" value="" placeholder="Digite seu email">
+                </div>
+              </div>
+          </form>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="submit" id="btn-recuperar" class="btn btn-primary">Recuperar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 
 

@@ -75,7 +75,7 @@ function getLojas(pg, qt, estado, cidade) {
                 for (var i = 0; i < data.lojas.length; i++) {
                     var box = $(html).appendTo(container);
                     box.html("<h2>" + data.lojas[i].nome + "</h2>")[i];
-                    box.append("<address class='end'>" + data.lojas[i].cidade + "," + data.lojas[i].estado + "</address>")[i];
+                    box.append("<address class='end'>" + data.lojas[i].cidade + ", " + data.lojas[i].uf + "</address>")[i];
                 }
 
                 if (data.lojas.length < 6) {
@@ -248,12 +248,10 @@ jQuery(function() {
 
 
     // CHECKBOX REGULAMENTO \\
-    $("#caixa-regulamento").change(function() {
-        if ($(this).is(":checked")) {
-            $('html, body').animate({
-                scrollTop: $("#regulamento").offset().top
-            }, 2000);
-        }
+    $("#caixa-regulamento").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#regulamento").offset().top
+        }, 2000);
     });
 
 
@@ -298,6 +296,59 @@ jQuery(function() {
     });
 
     // ||||||||||||||| \\
+
+
+    // ESQUECI MINHA SENHA \\
+
+
+    $("#form-esqueci-minha-senha").on("submit", function(event) {
+
+        event.preventDefault();
+
+        // Loading
+        $("#btn-recuperar").html('Enviando email...');
+
+        var dados = $("#form-esqueci-minha-senha").serialize();
+
+        $.ajax({
+            type: "POST",
+            url: "esqueciSenha",
+            data: dados,
+            datatype: 'json',
+            success: function(data) {
+                $("#entrar-usuario").html('Recuperar');
+
+                if (data.retorno.sucesso == false) {
+                    swal(
+                        'Oops...',
+                        data.retorno.msg,
+                        'error'
+                    )
+                } else {
+                    swal(
+                        'Sucesso!',
+                        data.retorno.msg,
+                        'success'
+                    )
+                }
+            }, //END success
+            error: function(e) {
+                swal(
+                    'Erro',
+                    e,
+                    'error'
+                )
+            }
+
+        });
+
+    });
+
+
+
+
+    // |||||||||||||| \\
+
 
     $("#slt_estados").change(function() {
         var estado = $(this).val();

@@ -101,26 +101,26 @@ use src\Helper\Session;
                             <div>
                                 <div class="col-lg-2 col-xs-12">
                                     <label for=" ">Dia da compra</label>
-                                    <input type="text " name="dia" id="dia" value="" class="form-control ">
+                                    <input type="text " required="required" name="dia" id="dia" value="" class="form-control ">
                                 </div>
                                 <div class="col-lg-2 col-xs-12">
                                     <label for=" ">Mês da compra</label>
-                                    <input type="text " name="mes" id="mes" value="" class="form-control ">
+                                    <input type="text " required="required" name="mes" id="mes" value="" class="form-control ">
                                 </div>
                                 <div class="col-lg-3 col-xs-12">
                                     <label for=" ">Ano da compra</label>
-                                    <input type="text " name="ano" id="ano" value="<?php echo date('Y'); ?>" class="form-control ">
+                                    <input type="text " required="required" name="ano" id="ano" value="<?php echo date('Y'); ?>" class="form-control ">
                                 </div>
                             </div>
                             <div class="col-lg-5 col-xs-12">
                                 <label for=" ">Número da nota fiscal</label>
-                                <input type="text " name="numero" value=" " class="form-control ">
+                                <input type="text " required="required" name="numero" value=" " class="form-control ">
                             </div>
                         </div>
                         <div class="form-group ">
                             <div class="col-lg-6 col-xs-12">
                                 <label for=" ">CNPJ da Loja</label>
-                                <input type="text " name="cnpj" value=" " class="form-control ">
+                                <input type="text " required="required" name="cnpj" value=" " class="form-control ">
                             </div>
                         </div>
                         <div class="form-group ">
@@ -152,11 +152,11 @@ use src\Helper\Session;
                             <div class="produto_estrela">
                                 <div class="col-lg-6 nome_produto">
                                     <label for=" ">Produto Estrela comprado</label>
-                                    <input type="text" name="produto[]" value=" " class="form-control ">
+                                    <input type="text" required="required" name="produto[]" value=" " class="form-control ">
                                 </div>
                                 <div class="col-lg-6 valor_produto">
                                     <label for=" ">Valor do produto</label>
-                                    <input type="text" name="valor_produto[]" value=" " class="form-control mask_valor_produto">
+                                    <input type="text" required="required" name="valor_produto[]" value=" " class="form-control mask_valor_produto">
                                 </div>
                             </div>
                         </div>
