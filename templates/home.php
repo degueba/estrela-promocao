@@ -412,19 +412,19 @@ Original::loadBlock('head');
                 <div class="col-lg-12 col-xs-12">
                     <ul class="cronometro">
                         <li>
-                            <h3 id="dias">45</h3>
+                            <h3 id="dias"></h3>
                             <small>dias</small>
                         </li>
                         <li>
-                            <h3 id="horas" class="horas">12</h3>
+                            <h3 id="horas" class="horas"></h3>
                             <small>horas</small>
                         </li>
                         <li>
-                            <h3 id="minutos" class="minutos">34</h3>
+                            <h3 id="minutos" class="minutos"></h3>
                             <small>minutos</small>
                         </li>
                         <li>
-                            <h3 id="segundos">27</h3>
+                            <h3 id="segundos"></h3>
                             <small>segundos</small>
                         </li>
                     </ul>
