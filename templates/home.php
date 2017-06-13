@@ -353,13 +353,13 @@ Original::loadBlock('head');
                         <li class="box">
                             <aside class="left">
                                 <figure>
-                                    <img src="http://via.placeholder.com/100x100" alt="..." class="img-circle">
+                                    <img src="/images/logo_estrela.png" alt="..." >
                                 </figure>
-                                <h2 class="hidden-xs">Loja 1</h2>
+                                <h2 class="hidden-xs">Loja da Estrela</h2>
                             </aside>
                             <aside class="right">
-                                <h2 class="visible-xs">Loja 1</h2>
-                                <a class="btn btn-primary">Entrar</a>
+                                <h2 class="visible-xs">Loja da Estrela</h2>
+                                <a href="http://www.estrela.com.br" target="_blank" class="btn btn-primary">Entrar</a>
                             </aside>
                         </li>
                     </ul>
