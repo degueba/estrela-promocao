@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "require": {
     "monolog/monolog": "1.0.*",
-    "klein/klein": "*"
+    "klein/klein": "*",
+    "phpmailer/phpmailer": "~5.2"
   },
   "autoload": {
     "psr-4": {

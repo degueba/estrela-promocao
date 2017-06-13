@@ -40,5 +40,10 @@ $rotas->respond('/getLojas', function ($request, $response, $service) {
     $pag->getLojas($request, $response, $service);
 });
 
+$rotas->respond('/esqueciSenha', function ($request, $response, $service) {
+    $pag = new HomeController();
+    $pag->esqueciSenha($request, $response, $service);
+});
+
 
 $rotas->dispatch();

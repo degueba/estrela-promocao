@@ -55,7 +55,7 @@ class LojaModel extends BaseModel {
         $sql = "SELECT DISTINCT 
                 loja.uf
                 FROM
-                loja WHERE loja.uf IS NOT NULL";
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.uf ASC";
         //echo $sql; die;
         $retorno = $this->DB->get_results($sql);
         if(count($retorno) > 0){
@@ -71,7 +71,7 @@ class LojaModel extends BaseModel {
                 loja.uf,
                 loja.cidade
                 FROM
-                loja WHERE loja.uf IS NOT NULL";
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC";
         if($uf){
             $sql .= " AND loja.uf = '".$uf."'";
         }
