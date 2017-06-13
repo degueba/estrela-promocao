@@ -297,6 +297,59 @@ jQuery(function() {
 
     // ||||||||||||||| \\
 
+
+    // ESQUECI MINHA SENHA \\
+
+
+    $("#form-esqueci-minha-senha").on("submit", function(event) {
+
+        event.preventDefault();
+
+        // Loading
+        $("#btn-recuperar").html('Enviando email...');
+
+        var dados = $("#form-esqueci-minha-senha").serialize();
+
+        $.ajax({
+            type: "POST",
+            url: "esqueciSenha",
+            data: dados,
+            datatype: 'json',
+            success: function(data) {
+                $("#entrar-usuario").html('Recuperar');
+
+                if (data.retorno.sucesso == false) {
+                    swal(
+                        'Oops...',
+                        data.retorno.msg,
+                        'error'
+                    )
+                } else {
+                    swal(
+                        'Sucesso!',
+                        data.retorno.msg,
+                        'success'
+                    )
+                }
+            }, //END success
+            error: function(e) {
+                swal(
+                    'Erro',
+                    e,
+                    'error'
+                )
+            }
+
+        });
+
+    });
+
+
+
+
+    // |||||||||||||| \\
+
+
     $("#slt_estados").change(function() {
         var estado = $(this).val();
         var estadoOption = $("#slt_estados option:selected").val();

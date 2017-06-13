@@ -785,6 +785,9 @@ body {
                 }
                 form {
                     color: #fff;
+                    .form-esqueci-senha {
+                        display: none;
+                    }
                     &#form-login {
                         margin-top: 50px;
                     }
@@ -843,6 +846,39 @@ body {
                             height: 30px;
                         }
                     }
+                }
+            }
+        }
+    }
+    #esqueci-senha-modal {
+        input[type=text] {
+            padding-left: 10px;
+        }
+        .modal-content {
+            .modal-header {
+                background-color: #FF2921;
+                font-family: 'omnesbold';
+                text-align: center;
+            }
+            color: #fff;
+            input[type=text] {
+                color: #013354;
+                height: 50px;
+                font-size: 15px;
+                &::-webkit-input-placeholder {
+                    color: #013354;
+                }
+            }
+            .modal-footer {
+                border-top: 0;
+                text-align: center;
+                button.btn#btn-recuperar {
+                    background-color: #013354;
+                    border-radius: 30px;
+                    height: 40px;
+                    outline: none;
+                    border: 0;
+                    padding: 10px 40px 20px 40px;
                 }
             }
         }
