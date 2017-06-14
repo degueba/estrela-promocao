@@ -71,10 +71,11 @@ class LojaModel extends BaseModel {
                 loja.uf,
                 loja.cidade
                 FROM
-                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC";
+                loja WHERE loja.uf IS NOT NULL";
         if($uf){
             $sql .= " AND loja.uf = '".$uf."'";
         }
+        $sql .= " ORDER BY loja.cidade ASC";
         //echo $sql; die;
         $retorno = $this->DB->get_results($sql);
         if(count($retorno) > 0){

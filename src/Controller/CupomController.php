@@ -24,99 +24,102 @@ class CupomController extends BaseController {
         if($request->method() == 'POST'){
             $post = $request->paramsPost();
             if(!empty($post['numero']) && !empty($post['dia']) && !empty($post['mes']) && !empty($post['ano']) && !empty($post['cnpj'])){
-                $nota = [];
-                $nota['numero'] = $post['numero'];
-                $notaModel = new NotaModel();
-                if(!$notaModel->findNota($nota)){
-                    $valorProdutos = 0;
-                    foreach ($post['valor_produto'] as $k => $value) {
-                        $valor = str_replace(['.', ','],['', '.'],$value);
-                        $valorProdutos += (int)$valor;
-                    }
-                    if($valorProdutos >= VALOR_GASTO_POR_CUPOM){
-                        // Pegar dados da loja
-                        $loja = [];
-                        
-                        $loja['cnpj'] = preg_replace('/[^0-9]/', '', $post['cnpj']);
+                $dataInicioPromocao = strtotime('2017-06-15 00:00:00');
+                $dataNota = strtotime($post['ano'].'-'.$post['mes'].'-'.$post['dia'].' 00:00:00');
+                if($dataNota > $dataInicioPromocao){
+                    $nota = [];
+                    $nota['numero'] = $post['numero'];
+                    $notaModel = new NotaModel();
+                    if(!$notaModel->findNota($nota)){
+                        $valorProdutos = 0;
+                        foreach ($post['valor_produto'] as $k => $value) {
+                            $valor = str_replace(['.', ','],['', '.'],$value);
+                            $valorProdutos += (int)$valor;
+                        }
+                        if($valorProdutos >= VALOR_GASTO_POR_CUPOM){
+                            // Pegar dados da loja
+                            $loja = [];
 
-                        if(!empty($post['uf'])){
-                            $loja['uf'] = $post['uf'];
-                        }
-                        if(!empty($post['cidade'])){
-                            $loja['cidade'] = $post['cidade'];
-                        }
-                        $lojaModel = new LojaModel();
-                        $retornoLoja = $lojaModel->findLoja($loja);
-                        if($retornoLoja){
-                            // Inserir nota
-                            $nota = [];
-                            $nota['numero'] = $post['numero'];
-                            $nota['usuario_id'] = Session::logado()['id'];
-                            $nota['data_compra'] = $post['ano'].'-'.$post['mes'].'-'.$post['dia'];
+                            $loja['cnpj'] = preg_replace('/[^0-9]/', '', $post['cnpj']);
+
                             if(!empty($post['uf'])){
-                                $nota['uf'] = $post['uf'];
+                                $loja['uf'] = $post['uf'];
                             }
                             if(!empty($post['cidade'])){
-                                $nota['cidade'] = $post['cidade'];
+                                $loja['cidade'] = $post['cidade'];
                             }
-                            if(!empty($post['site'])){
-                                $nota['site'] = $post['site'];
-                            }
-                            $nota['valor_total_estrela'] = $valorProdutos;
-                            $notaModel = new NotaModel();
-                            $notaId = $notaModel->addNota($nota);
-
-                            // Associa a nota a loja
-                            $notaHasLoja = [];
-                            $notaHasLoja['nota_id'] = $notaId;
-                            $notaHasLoja['loja_id'] = $retornoLoja[0]['id'];
-                            $notaModel->addNotaHasLoja($notaHasLoja);
-
-                            // Sortear cupons
-                            $cupomModel = new CupomModel();
-                            $cuponsSorteados = $cupomModel->findCupom([], true);
-                            // Mistura os cupons
-                            shuffle($cuponsSorteados);
-                            // Quantidade de cupons que o usuário tem direito
-                            $qtdCupons = (int)($valorProdutos / VALOR_GASTO_POR_CUPOM);
-                            $cuponsDistribuidos = '';
-                            for($x=0; $x<$qtdCupons; $x++) {
-                                // Dar cupons dos sorteados
-                                $cupom = [];
-                                $cupom['nota_id'] = $notaId;
-                                $cupom['usuario_id'] = Session::logado()['id'];
-                                $cupomModel->updateCupom($cupom, $cuponsSorteados[$x]['id']);
-                                $cuponsDistribuidos .= $cuponsSorteados[$x]['serie'].' - '.$cuponsSorteados[$x]['numero'].'<br>';
-                            }
-                            // Insere os produtos
-                            foreach ($post['valor_produto'] as $k => $value) {
-                                $valor = str_replace(['.', ','],['', '.'],$value);
-                                if($valor > 0){
-                                    $produto = [];
-                                    $produto['nota_id'] = $notaId;
-                                    $produto['nome'] = $post['produto'][$k];
-                                    $produto['valor'] = $valor;
-                                    $produtoModel = new ProdutoModel();
-                                    $produtoModel->addProduto($produto);
+                            $lojaModel = new LojaModel();
+                            $retornoLoja = $lojaModel->findLoja($loja);
+                            if($retornoLoja){
+                                // Inserir nota
+                                $nota = [];
+                                $nota['numero'] = $post['numero'];
+                                $nota['usuario_id'] = Session::logado()['id'];
+                                $nota['data_compra'] = $post['ano'].'-'.$post['mes'].'-'.$post['dia'];
+                                if(!empty($post['uf'])){
+                                    $nota['uf'] = $post['uf'];
                                 }
-                            }
+                                if(!empty($post['cidade'])){
+                                    $nota['cidade'] = $post['cidade'];
+                                }
+                                if(!empty($post['site'])){
+                                    $nota['site'] = $post['site'];
+                                }
+                                $nota['valor_total_estrela'] = $valorProdutos;
+                                $notaModel = new NotaModel();
+                                $notaId = $notaModel->addNota($nota);
 
-                            $mail = new \PHPMailer;
-                            $mail->isSMTP();                                      // Set mailer to use SMTP
-                            $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-                            $mail->SMTPAuth = true;                               // Enable SMTP authentication
-                            $mail->Username = 'ecommerce@estrela.com.br';                 // SMTP username
-                            $mail->Password = 'estrela1234';                           // SMTP password
-                            $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-                            $mail->Port = 587;                                    // TCP port to connect to
+                                // Associa a nota a loja
+                                $notaHasLoja = [];
+                                $notaHasLoja['nota_id'] = $notaId;
+                                $notaHasLoja['loja_id'] = $retornoLoja[0]['id'];
+                                $notaModel->addNotaHasLoja($notaHasLoja);
 
-                            $mail->setFrom('ecommerce@estrela.com.br', 'Estrela 80 anos');
-                            $mail->addAddress(Session::logado()['email'], Session::logado()['nome']);     // Add a recipient
+                                // Sortear cupons
+                                $cupomModel = new CupomModel();
+                                $cuponsSorteados = $cupomModel->findCupom([], true);
+                                // Mistura os cupons
+                                shuffle($cuponsSorteados);
+                                // Quantidade de cupons que o usuário tem direito
+                                $qtdCupons = (int)($valorProdutos / VALOR_GASTO_POR_CUPOM);
+                                $cuponsDistribuidos = '';
+                                for($x=0; $x<$qtdCupons; $x++) {
+                                    // Dar cupons dos sorteados
+                                    $cupom = [];
+                                    $cupom['nota_id'] = $notaId;
+                                    $cupom['usuario_id'] = Session::logado()['id'];
+                                    $cupomModel->updateCupom($cupom, $cuponsSorteados[$x]['id']);
+                                    $cuponsDistribuidos .= $cuponsSorteados[$x]['serie'].' - '.$cuponsSorteados[$x]['numero'].'<br>';
+                                }
+                                // Insere os produtos
+                                foreach ($post['valor_produto'] as $k => $value) {
+                                    $valor = str_replace(['.', ','],['', '.'],$value);
+                                    if($valor > 0){
+                                        $produto = [];
+                                        $produto['nota_id'] = $notaId;
+                                        $produto['nome'] = $post['produto'][$k];
+                                        $produto['valor'] = $valor;
+                                        $produtoModel = new ProdutoModel();
+                                        $produtoModel->addProduto($produto);
+                                    }
+                                }
 
-                            $mail->isHTML(true);                                  // Set email format to HTML
+                                $mail = new \PHPMailer;
+                                $mail->isSMTP();                                      // Set mailer to use SMTP
+                                $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+                                $mail->SMTPAuth = true;                               // Enable SMTP authentication
+                                $mail->Username = 'ecommerce@estrela.com.br';                 // SMTP username
+                                $mail->Password = 'estrela1234';                           // SMTP password
+                                $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+                                $mail->Port = 587;                                    // TCP port to connect to
 
-                            $mail->Subject = 'Estrela - Esqueci minha senha';
-                            $mail->Body    = '<table class="display: block; margin; 0 auto;" align="center">
+                                $mail->setFrom('ecommerce@estrela.com.br', 'Estrela 80 anos');
+                                $mail->addAddress(Session::logado()['email'], Session::logado()['nome']);     // Add a recipient
+
+                                $mail->isHTML(true);                                  // Set email format to HTML
+
+                                $mail->Subject = 'Estrela - Cupons da sorte';
+                                $mail->Body    = '<table class="display: block; margin; 0 auto;" align="center">
                                                 <thead>
                                                     <tr style="background-image: url(http://admin80anos.estrela.originalmedia.com.br/email/images/topo-cadastro-usuario.jpg); 
                                                     height: 205px;
@@ -168,18 +171,22 @@ class CupomController extends BaseController {
                                             
                                             </table>';
 
-                            $mail->send();
+                                $mail->send();
+                            }else{
+                                $container['retorno']['sucesso'] = false;
+                                $container['retorno']['msg'] = 'A loja informada não participa da promoção! Verifique o CNPJ digitado.';
+                            }
                         }else{
                             $container['retorno']['sucesso'] = false;
-                            $container['retorno']['msg'] = 'A loja informada não participa da promoção! Verifique o CNPJ digitado.';
+                            $container['retorno']['msg'] = 'O valor total de produtos estrela não foram suficientes para gerar cupons!';
                         }
                     }else{
                         $container['retorno']['sucesso'] = false;
-                        $container['retorno']['msg'] = 'O valor total de produtos estrela não foram suficientes para gerar cupons!';
+                        $container['retorno']['msg'] = 'Essa nota fiscal já foi cadastrada!';
                     }
                 }else{
                     $container['retorno']['sucesso'] = false;
-                    $container['retorno']['msg'] = 'Essa nota fiscal já foi cadastrada!';
+                    $container['retorno']['msg'] = 'Essa compra está fora da data da promoção!';
                 }
             }else{
                 $container['retorno']['sucesso'] = false;
