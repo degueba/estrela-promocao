@@ -646,3 +646,103 @@
                 FROM
                 loja
                 WHERE 1=1 LIMIT , [] []
+[2017-06-14 15:32:56] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'KA'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'KA' [] []
+[2017-06-14 15:32:58] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'MA'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'MA' [] []
+[2017-06-14 15:33:01] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'RJ'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'RJ' [] []
+[2017-06-14 15:33:04] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'SC'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'SC' [] []
+[2017-06-14 15:33:10] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'KA'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'KA' [] []
+[2017-06-14 15:33:12] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'RJ'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'RJ' [] []
+[2017-06-14 15:33:13] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'SP'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'SP' [] []
+[2017-06-14 15:33:17] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'SP'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'SP' [] []
+[2017-06-14 15:33:19] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'PA'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'PA' [] []
+[2017-06-14 15:51:45] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'KA'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'KA' [] []
+[2017-06-14 15:51:46] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'PA'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'PA' [] []
+[2017-06-14 16:05:45] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'KA'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'KA' [] []
+[2017-06-14 16:05:49] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'MA'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'MA' [] []
+[2017-06-14 16:05:51] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'RJ'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'RJ' [] []
+[2017-06-14 16:05:53] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'SC'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'SC' [] []
+[2017-06-14 16:05:55] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'SP'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'SP' [] []
+[2017-06-14 16:13:34] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'KA'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'KA' [] []
+[2017-06-14 16:14:01] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'MA'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'MA' [] []
+[2017-06-14 16:37:03] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'PA'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'PA' [] []
+[2017-06-14 16:59:11] mysql.WARNING: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND loja.uf = 'KA'' at line 5 : SELECT DISTINCT 
+                loja.uf,
+                loja.cidade
+                FROM
+                loja WHERE loja.uf IS NOT NULL ORDER BY loja.cidade ASC AND loja.uf = 'KA' [] []

@@ -33,7 +33,6 @@ body {
     // MENU MOBILE
     .barra-sup {
         height: 40px;
-        position: fixed;
         /*Hasta q no pones el width, no sale la barra gris por culpa del position fixed y no tener ningun contenido dentro!*/
         width: 55%;
         .hamburguer {
@@ -41,7 +40,7 @@ body {
             margin-top: 15px;
             cursor: pointer;
             position: absolute;
-            right: 0;
+            right: 15px;
             span {
                 display: block;
                 width: 20px;
@@ -251,6 +250,7 @@ body {
         }
         .globo-promocao--volta---mundo {
             position: relative;
+            height: 345px;
             @media screen and (max-width: $break-small) {
                 width: 100%;
                 height: 290px;
@@ -261,6 +261,22 @@ body {
             img {
                 position: absolute;
                 top: -70px;
+            }
+            small {
+                position: absolute;
+                bottom: -54px;
+                font-size: 10px;
+                left: 90px;
+                @media screen and (min-width: $break-small-iphone5) {
+                    bottom: 20px;
+                    left: 20%;
+                    font-size: 8.7px;
+                }
+                @media screen and (min-width: $break-small-iphone6) {
+                    bottom: 1%;
+                    left: 24%;
+                    font-size: 8.7px;
+                }
             }
         }
     }
@@ -365,7 +381,7 @@ body {
                     @media screen and (max-width: $break-small) {
                         margin-left: 120px;
                         display: block;
-                        width: 200px;
+                        width: 150px;
                         text-align: left;
                         font-size: 18px;
                         word-wrap: break-word;
@@ -591,6 +607,9 @@ body {
                 aside.left {
                     float: left;
                     width: 60%;
+                    @media screen and (max-width: $break-small) {
+                        width: 40%;
+                    }
                     figure {
                         padding: 25px;
                         float: left;
@@ -607,7 +626,7 @@ body {
                     height: 100%;
                     padding-top: 60px;
                     @media screen and (max-width: $break-small) {
-                        width: 40%;
+                        width: 50%;
                         padding-top: 10px;
                     }
                     a {
@@ -673,7 +692,7 @@ body {
                 margin-left: 30px;
                 color: #fff;
                 @media screen and (max-width: $break-small) {
-                    margin-left: 15px;
+                    margin-left: 5px;
                 }
                 h3 {
                     font-size: 7em;
@@ -782,6 +801,7 @@ body {
                 color: #fff;
                 @media screen and (max-width: $break-small) {
                     min-height: 990px;
+                    padding: 10px;
                 }
                 form {
                     color: #fff;

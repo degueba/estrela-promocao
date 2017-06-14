@@ -17,9 +17,7 @@ use src\Helper\Session;
 
 
 <body class="container-fluid user-profile">
-    
-
-     <!-- MENU LATERAL MOBILE -->
+    <!-- MENU LATERAL MOBILE -->
     <nav class="hidden-lg nav-lateral-mobile">
         <!-- La cruz para cerrar el menu lateral -->
         <div class="cruz">
@@ -45,8 +43,8 @@ use src\Helper\Session;
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <a class="navbar-brand" href="#">
-                            <img href="#" alt="Brand" src="images/logo_estrela.png">
+                        <a href="http://voltaaomundo.estrela.com.br/" class="navbar-brand" href="#">
+                            <img  alt="Brand" src="images/logo_estrela.png">
                         </a>
                         <!-- HAMBURGUER -->
                     <div class="barra-sup hidden-lg">
@@ -100,15 +98,15 @@ use src\Helper\Session;
                         <div class="form-group ">
                             <div>
                                 <div class="col-lg-2 col-xs-12">
-                                    <label for=" ">Dia da compra</label>
+                                    <label for=" ">Dia da compra*</label>
                                     <input type="text " required="required" name="dia" id="dia" value="" class="form-control ">
                                 </div>
                                 <div class="col-lg-2 col-xs-12">
-                                    <label for=" ">Mês da compra</label>
+                                    <label for=" ">Mês da compra*</label>
                                     <input type="text " required="required" name="mes" id="mes" value="" class="form-control ">
                                 </div>
                                 <div class="col-lg-3 col-xs-12">
-                                    <label for=" ">Ano da compra</label>
+                                    <label for=" ">Ano da compra*</label>
                                     <input type="text " required="required" name="ano" id="ano" value="<?php echo date('Y'); ?>" class="form-control ">
                                 </div>
                             </div>
@@ -125,7 +123,7 @@ use src\Helper\Session;
                         </div>
                         <div class="form-group ">
                             <div class="col-lg-3 col-xs-12">
-                                <label for=" ">Estado da Loja*</label>
+                                <label for=" ">Estado da Loja**</label>
                                  <select class="form-control" name="uf" id="slt_estados">
                                         <option value="">Estado</option>
                                         <?php foreach($container["uf"] as $uf){ ?>
@@ -134,13 +132,13 @@ use src\Helper\Session;
                                 </select>
                             </div>
                             <div class="col-lg-3 col-xs-12">
-                                <label for=" ">Cidade*</label>
+                                <label for=" ">Cidade**</label>
                                 <select class="form-control"  name="cidade" id="slt_cidades">
                                         <option value="" selected>Cidade</option>
                                 </select>
                             </div>
                             <div class="col-lg-12 col-xs-12">
-                                <label for=" ">Site da Loja **</label>
+                                <label for=" ">Site da Loja ***</label>
                                 <!-- small class="help-msg ">* Somente para compras online</small-->
                                 <div class="input-group ">
                                     <span class="input-group-addon ">www.</span>
@@ -166,11 +164,15 @@ use src\Helper\Session;
                             </div>
                         </div>
                         <div class="form-group ">
-                            <div class="col-lg-8 col-xs-11">
+                            <div class="col-lg-8  col-xs-11">
                                 <button type="submit" class="pull-right btn btn-cadastrar ">Cadastrar</button>
                             </div>
-                            <small class="pull-right help-msg ">* Somente para lojas físicas</small>
-                            <small class="pull-right help-msg ">** Somente para lojas online</small>
+                            
+                            <div class="col-lg-12">
+                                <small class="help-msg">* Somente compras realizadas a partir do dia 15/06/2017</small><br>
+                                <small class="help-msg ">** Somente para lojas físicas</small><br>
+                                <small class="help-msg ">*** Somente para lojas online</small>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -178,12 +180,13 @@ use src\Helper\Session;
                     <div class="col-lg-12 col-xs-12">
                         <div class="box-user meu-perfil ">
                             <header>
-                                <h3 class="title pull-left">Meu Perfil</h3> <small class="pull-right "> <a class="btn btn-default btn-edit--perfil ">Editar Perfil</a></small>
+                                <h3 class="title pull-left">Meu Perfil</h3> <small class="pull-right "> <!-- a class="btn btn-default btn-edit--perfil ">Editar Perfil</a --></small>
                             </header>
                             <div class="content ">
                                 <ol class="lista-editar--perfil">
                                     <li><b>Nome:</b> <?php echo Session::logado()["nome"]; ?></li>
                                     <li><b>Email:</b> <?php echo Session::logado()["email"]; ?></li>
+                                    <li><b>CPF:</b> <?php echo Session::logado()["cpf"]; ?></li>
                                     <li><b>Telefone:</b> <?php echo Session::logado()["telefone"]; ?></li>
                                 </ol>
                             </div>
@@ -205,7 +208,7 @@ use src\Helper\Session;
                                 <li class="lista-meus--cupons ">
                                     <div class="pull-left ">
                                         <h6>Cupom</h6>
-                                        <strong><?php echo $c['numero']; ?></strong>
+                                        <strong><?php echo $c['serie'] . '-' .$c['numero']; ?></strong>
                                     </div>
                                     <div class="pull-right ">
                                         <h6>Entrada</h6>

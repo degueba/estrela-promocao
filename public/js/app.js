@@ -30,6 +30,21 @@ var x = setInterval(function() {
 }, 1000);
 
 
+function validandoData(dia, mes, ano) {
+    var dataInicio = new Date("2017-06-15 00:00:00").getTime();
+    var dataInput = new Date(ano + "-" + mes + "-" + dia + " 00:00:00").getTime();
+
+    if (dataInput < dataInicio) {
+        alert("Data inválida \n O sorteio começará no dia 15/06.");
+
+
+        return false;
+    }
+
+    return true;
+}
+
+
 function camposIguais(campo1, campo2, msg) {
     if ($("#" + campo1).val() != "" && $("#" + campo2).val() != "") {
         if ($("#" + campo1).val() != $("#" + campo2).val()) {
@@ -39,6 +54,10 @@ function camposIguais(campo1, campo2, msg) {
         }
     }
 }
+
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+
 
 function removeProdutoEstrela(n) {
     $(n).remove();
@@ -102,6 +121,7 @@ function getLojas(pg, qt, estado, cidade) {
 }
 
 
+
 jQuery(function() {
     $("#telefone").mask("(99) 9999-9999?9");
     $("#cpf").mask("999.999.999-99");
@@ -122,8 +142,16 @@ jQuery(function() {
         $("#cnpj").mask("99.999.999/9999-99");
         // ** \\
 
+        $("#form-cadastrar-nota").submit(function() {
+            var dia = $("#dia").val();
+            var mes = $("#mes").val();
+            var ano = $("#ano").val();
 
 
+            return validandoData(dia, mes, ano);
+
+
+        });
 
         // PÁGINA CUPOM
         var NUMERACAO_CAMPO = 0;
@@ -185,23 +213,35 @@ jQuery(function() {
     });
 
     // Scroll nav header
-    $(window).scroll(function() {
-        // Menu mobile
-        if ($('nav.nav-lateral-mobile').hasClass('mostrar')) {
-            $('nav.nav-lateral-mobile').removeClass('mostrar');
-        }
+
+    if (!isMobile) {
+        $(window).scroll(function() {
+
+            var $this = $(this),
+                $navHeader = $("#menu-nav");
+
+            if ($this.scrollTop() > 120) {
+                $("#menu-nav").addClass("navbar-nav-mobile");
+            } else {
+                $("#menu-nav").removeClass("navbar-nav-mobile");
+            }
+
+        });
+    } else {
+        $(window).scroll(function() {
+
+            // Menu mobile
+            if ($('nav.nav-lateral-mobile').hasClass('mostrar')) {
+                $('nav.nav-lateral-mobile').removeClass('mostrar');
+            }
+
+        });
 
 
-        var $this = $(this),
-            $navHeader = $("#menu-nav");
+    }
 
-        if ($this.scrollTop() > 120) {
-            $("#menu-nav").addClass("navbar-nav-mobile");
-        } else {
-            $("#menu-nav").removeClass("navbar-nav-mobile");
-        }
 
-    });
+
 
 
     // CADASTRO USUÁRIO \\
@@ -454,6 +494,6 @@ jQuery(function() {
 
 
 
-    getLojas(PAGE, PAGE_ITENS);
+    //getLojas(PAGE, PAGE_ITENS);
 
 });
