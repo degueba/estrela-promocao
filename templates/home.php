@@ -1,7 +1,7 @@
 <?php
 use src\Helper\Original;
 Original::loadBlock('head');
-
+Original::loadBlock('topo_home');
 ?>
     <!--SECTIONS-->
 

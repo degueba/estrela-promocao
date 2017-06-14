@@ -24,7 +24,7 @@ class CupomController extends BaseController {
         if($request->method() == 'POST'){
             $post = $request->paramsPost();
             if(!empty($post['numero']) && !empty($post['dia']) && !empty($post['mes']) && !empty($post['ano']) && !empty($post['cnpj'])){
-                $dataInicioPromocao = strtotime('2017-06-15 00:00:00');
+                $dataInicioPromocao = strtotime('2017-06-14 00:00:00');
                 $dataNota = strtotime($post['ano'].'-'.$post['mes'].'-'.$post['dia'].' 00:00:00');
                 if($dataNota > $dataInicioPromocao){
                     $nota = [];

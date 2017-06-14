@@ -1,22 +1,8 @@
 <?php
 use src\Helper\Original;
 use src\Helper\Session;
+Original::loadBlock('head');
 ?>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/default.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <!--FAVICON-->
-    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
-</head>
-
-
 
 <body class="container-fluid user-profile">
     <!-- MENU LATERAL MOBILE -->
@@ -235,15 +221,16 @@ use src\Helper\Session;
         </div>
     </div>
 
-<?php if($container['retorno']['sucesso'] && !empty($container['retorno']['msg'])){ ?>
-<script>
-    swal(
-        'Sucesso!',
-        '<?php echo $container['retorno']['msg']; ?>',
-        'success'
-    )
-</script>
-<?php } ?>
 <?php
 Original::loadBlock('footer');
 ?>
+
+<?php if($container['retorno']['sucesso'] && !empty($container['retorno']['msg'])){ ?>
+    <script>
+        swal(
+            'Sucesso!',
+            '<?php echo $container['retorno']['msg']; ?>',
+            'success'
+        )
+    </script>
+<?php } ?>
