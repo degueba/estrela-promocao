@@ -16,7 +16,7 @@
             <li><a href="#premios" class="scroll-suave">Prêmios</a></li>
             <li><a href="#regulamento" class="scroll-suave">Regulamento</a></li>
             <li><a href="#lojas-participantes" class="scroll-suave">Lojas Participantes</a></li>
-            <li><a href="#cadastro-ou-login" class="scroll-suave"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Entrar</a></li>
+            <li><a href="#cadastro-ou-login" class="scroll-suave"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Entrar</a></li>
         </ul>
     </nav>
 <div class="row">
