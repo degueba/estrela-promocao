@@ -224,7 +224,7 @@ class HomeController extends BaseController {
                     $mail->Subject = utf8_decode('Promoção Volta ao Mundo Estrela 80 anos - Esqueci minha senha');
                     $mail->Body    = '<table class="display: block; margin; 0 auto;" align="center">
                                             <thead>
-                                                <tr style="background-image: url(http://admin80anos.estrela.originalmedia.com.br/email/images/topo-cadastro-usuario.jpg); 
+                                                <tr style="background-image: url(http://admin80anos.estrela.originalmedia.com.br/email/images/topo-senha.jpg); 
                                                 height: 205px;
                                                 width: 633px;
                                                 display: block;">
