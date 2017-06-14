@@ -88,7 +88,7 @@ class HomeController extends BaseController {
 
                         $mail->isHTML(true);                                  // Set email format to HTML
 
-                        $mail->Subject = 'Promoção Volta ao Mundo Estrela 80 anos - Cadastro';
+                        $mail->Subject = 'Promoção Volta ao Mundo Estrela 80 anos';
                         $mail->Body    = '<table class="display: block; margin; 0 auto;" align="center">
                                             <thead>
                                                 <tr style="background-image: url(http://admin80anos.estrela.originalmedia.com.br/email/images/topo-cadastro-usuario.jpg); 
@@ -105,7 +105,7 @@ class HomeController extends BaseController {
                                             color: #999;
                                             font-size: 25px;
                                             margin: 30px auto;">
-                                                            Oi, '.Session::logado()['nome'].'! <br> Seu cadastro foi efetuado com sucesso. <br> Agora comece a torcida para ganhar essa promo&ccedil;&atilde;o! <br> N&atilde;o deixe de cadastrar sua nota fiscal para receber o n&uacute;mero da sorte. <br> Confira o regulamento
+                                                            Oi, '.Session::logado()['nome'].'! <br> Seu cadastro foi efetuado com sucesso. <br> N&atilde;o deixe de cadastrar sua nota fiscal para receber o n&uacute;mero da sorte. <br> Confira o regulamento
                                                             da promo&ccedil;&atilde;o e <br> BOA SORTE!
                                                         </p>
                                                         <p>
