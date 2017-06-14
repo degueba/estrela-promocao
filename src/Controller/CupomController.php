@@ -118,7 +118,7 @@ class CupomController extends BaseController {
 
                                 $mail->isHTML(true);                                  // Set email format to HTML
 
-                                $mail->Subject = 'Estrela - Cupons da sorte';
+                                $mail->Subject = 'Promoção Volta ao Mundo Estrela 80 anos - Cupons';
                                 $mail->Body    = '<table class="display: block; margin; 0 auto;" align="center">
                                                 <thead>
                                                     <tr style="background-image: url(http://admin80anos.estrela.originalmedia.com.br/email/images/topo-cadastro-usuario.jpg); 

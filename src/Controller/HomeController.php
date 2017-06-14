@@ -88,7 +88,7 @@ class HomeController extends BaseController {
 
                         $mail->isHTML(true);                                  // Set email format to HTML
 
-                        $mail->Subject = 'Estrela - Bem vindo(a)!';
+                        $mail->Subject = 'Promoção Volta ao Mundo Estrela 80 anos - Cadastro';
                         $mail->Body    = '<table class="display: block; margin; 0 auto;" align="center">
                                             <thead>
                                                 <tr style="background-image: url(http://admin80anos.estrela.originalmedia.com.br/email/images/topo-cadastro-usuario.jpg); 
@@ -221,7 +221,7 @@ class HomeController extends BaseController {
 
                     $mail->isHTML(true);                                  // Set email format to HTML
 
-                    $mail->Subject = 'Estrela - Esqueci minha senha';
+                    $mail->Subject = 'Promoção Volta ao Mundo Estrela 80 anos - Esqueci minha senha';
                     $mail->Body    = '<table class="display: block; margin; 0 auto;" align="center">
                                             <thead>
                                                 <tr style="background-image: url(http://admin80anos.estrela.originalmedia.com.br/email/images/topo-cadastro-usuario.jpg); 
