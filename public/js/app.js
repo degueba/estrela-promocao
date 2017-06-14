@@ -441,7 +441,7 @@ jQuery(function() {
         event.preventDefault;
         $(".lojas-fisica").html('');
         PAGE = 1;
-        $(".btn-mais--lojas").show();
+        $(".btn-mais--lojas").removeClass('hidden');
 
         var estado = $("#slt_estados option:selected").val();
         var cidade = $("#slt_cidades option:selected").val();

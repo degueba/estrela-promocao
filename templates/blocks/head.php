@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    <title></title>
+    <title>Volta ao Mundo - Estrela</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/default.css" rel="stylesheet">
