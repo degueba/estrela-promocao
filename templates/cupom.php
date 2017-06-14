@@ -233,8 +233,15 @@ use src\Helper\Session;
         </div>
     </div>
 
-<div class="row">
-    <?php
+<?php if($container['retorno']['sucesso'] && !empty($container['retorno']['msg'])){ ?>
+<script>
+    swal(
+        'Sucesso!',
+        '<?php echo $container['retorno']['msg']; ?>',
+        'success'
+    )
+</script>
+<?php } ?>
+<?php
 Original::loadBlock('footer');
 ?>
-</div>

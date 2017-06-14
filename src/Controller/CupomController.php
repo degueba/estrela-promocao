@@ -172,6 +172,7 @@ class CupomController extends BaseController {
                                             </table>';
 
                                 $mail->send();
+                                $container['retorno']['msg'] = 'Parabéns! Sua nota fiscal foi cadastrada com sucesso. Boa sorte!';
                             }else{
                                 $container['retorno']['sucesso'] = false;
                                 $container['retorno']['msg'] = 'A loja informada não participa da promoção! Verifique o CNPJ digitado.';
