@@ -98,8 +98,8 @@ class HomeController extends BaseController {
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr style="background-color: #f3f3f3; height: 620px; width: 633px; display: block; padding-top: 40px;">
-                                                    <td style="background-color: #fff; width: 500px; height: 500px; border-radius: 30px; border: 1px solid #999; margin: 0 auto; display: block;">
+                                                <tr style="background-color: #f3f3f3; height: auto; padding:20px 0; width: 633px; display: block; padding-top: 40px;">
+                                                    <td style="background-color: #fff; width: 500px; height: auto; border-radius: 30px; border: 1px solid #999; margin: 0 auto; display: block;">
                                                         <p style="width: 80%;
                                             text-align: center;
                                             color: #999;
@@ -231,8 +231,8 @@ class HomeController extends BaseController {
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr style="background-color: #f3f3f3; height: 600px; width: 633px; display: block; padding-top: 40px;">
-                                                    <td style="background-color: #fff; width: 500px; height: 500px; border-radius: 30px; border: 1px solid #999; margin: 0 auto; display: block;">
+                                                <tr style="background-color: #f3f3f3; height: auto; padding:20px 0; width: 633px; display: block; padding-top: 40px;">
+                                                    <td style="background-color: #fff; width: 500px; height: auto; border-radius: 30px; border: 1px solid #999; margin: 0 auto; display: block;">
                                                         <p style="width: 80%;
                                             text-align: center;
                                             color: #999;
