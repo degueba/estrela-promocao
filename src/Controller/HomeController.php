@@ -144,7 +144,7 @@ class HomeController extends BaseController {
                     }
                 }else{
                     $container['retorno']['sucesso'] = false;
-                    $container['retorno']['msg'] = 'Você já é cadastrado, recupere a sua senha.';
+                    $container['retorno']['msg'] = 'Parece que você já possui cadastro. Faça login para entrar no site.';
                 }
             }else{
                 $container['retorno']['sucesso'] = false;
