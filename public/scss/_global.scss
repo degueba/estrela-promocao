@@ -607,6 +607,11 @@ body {
                 border-radius: 10px;
                 float: left;
                 margin: 15px 15px 15px 0;
+                h2 {
+                    max-height: 65px;
+                    height: auto;
+                    overflow: hidden;
+                }
             }
             /*--LOJAS ONLINE--*/
             &.lojas-online {

@@ -360,7 +360,7 @@ jQuery(function() {
             data: dados,
             datatype: 'json',
             success: function(data) {
-                $("#entrar-usuario").html('Recuperar');
+                $("#btn-recuperar").html('Recuperar');
 
                 if (data.retorno.sucesso == false) {
                     swal(
