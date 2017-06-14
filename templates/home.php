@@ -556,28 +556,28 @@ Original::loadBlock('head');
 <!-- Modal ESQUECI MINHA SENHA -->
 <div id="esqueci-senha-modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Esqueci minha senha</h4>
-      </div>
-      <div class="modal-body">
-          <form class="row" id="form-esqueci-minha-senha" method="post">
-              <div class="col-lg-12">
-                <div class="form-group">
-                    <input type="text" class="form-control" required="required" name="email" value="" placeholder="Digite seu email">
+    <form class="row" id="form-esqueci-minha-senha" method="post">
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Esqueci minha senha</h4>
+        </div>
+        <div class="modal-body">
+            
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" required="required" name="email" value="" placeholder="Digite seu email">
+                    </div>
                 </div>
-              </div>
-          </form>
-        
-      </div>
-      <div class="modal-footer">
-        <button type="submit" id="btn-recuperar" class="btn btn-primary">Recuperar</button>
-      </div>
-    </div>
-
+            
+            
+        </div>
+        <div class="modal-footer">
+            <button type="submit" id="btn-recuperar" class="btn btn-primary">Recuperar</button>
+        </div>
+        </div>
+     </form>
   </div>
 </div>
 

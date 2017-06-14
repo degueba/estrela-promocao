@@ -12,6 +12,8 @@ use src\Helper\Session;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/default.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--FAVICON-->
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
 </head>
 
 
@@ -99,31 +101,31 @@ use src\Helper\Session;
                             <div>
                                 <div class="col-lg-2 col-xs-12">
                                     <label for=" ">Dia da compra*</label>
-                                    <input type="text " required="required" name="dia" id="dia" value="" class="form-control ">
+                                    <input type="text" required="required" name="dia" id="dia" class="form-control ">
                                 </div>
                                 <div class="col-lg-2 col-xs-12">
                                     <label for=" ">Mês da compra*</label>
-                                    <input type="text " required="required" name="mes" id="mes" value="" class="form-control ">
+                                    <input type="text" required="required" name="mes" id="mes" class="form-control ">
                                 </div>
                                 <div class="col-lg-3 col-xs-12">
                                     <label for=" ">Ano da compra*</label>
-                                    <input type="text " required="required" name="ano" id="ano" value="<?php echo date('Y'); ?>" class="form-control ">
+                                    <input type="text" required="required" name="ano" id="ano" value="<?php echo date('Y'); ?>" class="form-control ">
                                 </div>
                             </div>
                             <div class="col-lg-5 col-xs-12">
                                 <label for=" ">Número da nota fiscal</label>
-                                <input type="text " required="required" name="numero" value=" " class="form-control ">
+                                <input type="text" required name="numero" class="form-control ">
                             </div>
                         </div>
                         <div class="form-group ">
                             <div class="col-lg-6 col-xs-12">
                                 <label for=" ">CNPJ da Loja</label>
-                                <input type="text " required="required" name="cnpj" value=" " class="form-control ">
+                                <input type="text" required name="cnpj" class="form-control ">
                             </div>
                         </div>
                         <div class="form-group ">
                             <div class="col-lg-3 col-xs-12">
-                                <label for=" ">Estado da Loja**</label>
+                                <label for="">Estado da Loja**</label>
                                  <select class="form-control" name="uf" id="slt_estados">
                                         <option value="">Estado</option>
                                         <?php foreach($container["uf"] as $uf){ ?>
@@ -132,17 +134,17 @@ use src\Helper\Session;
                                 </select>
                             </div>
                             <div class="col-lg-3 col-xs-12">
-                                <label for=" ">Cidade**</label>
+                                <label for="">Cidade**</label>
                                 <select class="form-control"  name="cidade" id="slt_cidades">
                                         <option value="" selected>Cidade</option>
                                 </select>
                             </div>
                             <div class="col-lg-12 col-xs-12">
-                                <label for=" ">Site da Loja ***</label>
+                                <label for="">Site da Loja ***</label>
                                 <!-- small class="help-msg ">* Somente para compras online</small-->
-                                <div class="input-group ">
+                                <div class="input-group">
                                     <span class="input-group-addon ">www.</span>
-                                    <input type="text " name="site" value=" " class="form-control ">
+                                    <input type="text" name="site" class="form-control ">
                                 </div>
                             </div>
                         </div>
@@ -150,11 +152,11 @@ use src\Helper\Session;
                             <div class="produto_estrela">
                                 <div class="col-lg-6 nome_produto">
                                     <label for=" ">Produto Estrela comprado</label>
-                                    <input type="text" required="required" name="produto[]" value=" " class="form-control ">
+                                    <input type="text" required name="produto[]"  class="form-control ">
                                 </div>
                                 <div class="col-lg-6 valor_produto">
-                                    <label for=" ">Valor do produto</label>
-                                    <input type="text" required="required" name="valor_produto[]" value=" " class="form-control mask_valor_produto">
+                                    <label for="">Valor do produto</label>
+                                    <input type="text" required name="valor_produto[]"  class="form-control mask_valor_produto">
                                 </div>
                             </div>
                         </div>
@@ -163,26 +165,26 @@ use src\Helper\Session;
                                 <button type="button" class="btn btn-default btn-add-produto"><i class="fa fa-plus "></i> Adicionar produto estrela</button>
                             </div>
                         </div>
-                        <div class="form-group ">
+                        <div class="form-group">
                             <div class="col-lg-8  col-xs-11">
                                 <button type="submit" class="pull-right btn btn-cadastrar ">Cadastrar</button>
                             </div>
                             
                             <div class="col-lg-12">
                                 <small class="help-msg">* Somente compras realizadas a partir do dia 15/06/2017</small><br>
-                                <small class="help-msg ">** Somente para lojas físicas</small><br>
-                                <small class="help-msg ">*** Somente para lojas online</small>
+                                <small class="help-msg">** Somente para compras realizadas em lojas físicas</small><br>
+                                <small class="help-msg">*** Somente para compras realizadas em lojas online</small>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="row" id="meu-perfil">
                     <div class="col-lg-12 col-xs-12">
-                        <div class="box-user meu-perfil ">
+                        <div class="box-user meu-perfil">
                             <header>
-                                <h3 class="title pull-left">Meu Perfil</h3> <small class="pull-right "> <!-- a class="btn btn-default btn-edit--perfil ">Editar Perfil</a --></small>
+                                <h3 class="title pull-left">Meu Perfil</h3> <small class="pull-right"> <!-- a class="btn btn-default btn-edit--perfil ">Editar Perfil</a --></small>
                             </header>
-                            <div class="content ">
+                            <div class="content">
                                 <ol class="lista-editar--perfil">
                                     <li><b>Nome:</b> <?php echo Session::logado()["nome"]; ?></li>
                                     <li><b>Email:</b> <?php echo Session::logado()["email"]; ?></li>
