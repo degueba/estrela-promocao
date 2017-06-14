@@ -91,11 +91,15 @@ function getLojas(pg, qt, estado, cidade) {
             var html = '<li class="box"><div class="content"></div></li>'
 
             if (data.lojas) {
+                $(".btn-mais--lojas").show();
+
                 for (var i = 0; i < data.lojas.length; i++) {
                     var box = $(html).appendTo(container);
                     box.html("<h2>" + data.lojas[i].nome + "</h2>")[i];
                     box.append("<address class='end'>" + data.lojas[i].cidade + ", " + data.lojas[i].uf + "</address>")[i];
                 }
+
+
 
                 if (data.lojas.length < 6) {
                     $(".btn-mais--lojas").hide();
@@ -485,11 +489,12 @@ jQuery(function() {
 
     // MOBILE \\
     $('.hamburguer').on("click", function() {
-        $('nav.nav-lateral-mobile').toggleClass("mostrar");
+
+        $('nav.nav-lateral-mobile').removeClass('hidden').toggleClass("mostrar");
     });
 
     $('.cruz').on("click", function() {
-        $('nav.nav-lateral-mobile').removeClass('mostrar');
+        $('nav.nav-lateral-mobile').removeClass('mostrar').addClass('hidden');
     });
 
 

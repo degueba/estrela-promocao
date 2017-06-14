@@ -67,12 +67,12 @@ Original::loadBlock('head');
                         if(is_array($container['cupom'])){  
                             $qtdCupom = count($container['cupom']);
                             if($qtdCupom > 1){
-                                echo "<strong> têm " . $qtdCupom.' cupons</strong><br>';
+                                echo "<strong> tem " . $qtdCupom.' cupons</strong><br>';
                             } else {
                                 echo "<strong> tem " . $qtdCupom.'  cupom</strong><br>';
                             }
                         }else{
-                            echo 'não tem <strong>nenhum cupom</strong>';
+                            echo 'ainda não possui <strong>nenhum cupom</strong>';
                         }
                     ?>
                     

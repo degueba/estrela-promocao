@@ -1,6 +1,6 @@
 <body class="container-fluid">
      <!-- MENU LATERAL MOBILE -->
-    <nav class="hidden-lg nav-lateral-mobile">
+    <nav class="hidden-lg nav-lateral-mobile hidden">
         <!-- La cruz para cerrar el menu lateral -->
         <div class="cruz">
             <!-- Los span van a ser las dos barras de la cruz! -->

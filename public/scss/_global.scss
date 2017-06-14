@@ -202,6 +202,9 @@ body {
         background: url(../images/bg_volta_ao_mundo.png);
         margin: 80px 0 35px 0;
         padding: 60px 0 70px 0;
+        @media screen and (max-width: $break-small) {
+            margin: 35px 0 35px 0;
+        }
         .title,
         .subtitle {
             &::first-letter {
@@ -239,13 +242,15 @@ body {
         .btn-participa {
             background-color: #B14599;
             @media screen and (max-width: $break-small) {
-                width: 100%;
+                width: 90%;
+                margin: 10px 20px 0 20px;
             }
         }
         .btn-cadastre {
             background-color: #F38620;
             @media screen and (max-width: $break-small) {
-                width: 100%;
+                width: 90%;
+                margin: 10px 20px 0 20px;
             }
         }
         .globo-promocao--volta---mundo {
@@ -256,6 +261,7 @@ body {
                 height: 290px;
                 img {
                     top: 0;
+                    width: 90%;
                 }
             }
             img {
@@ -267,12 +273,12 @@ body {
                 bottom: -54px;
                 font-size: 10px;
                 left: 90px;
-                @media screen and (min-width: $break-small-iphone5) {
+                @media screen and (min-width: $break-small-iphone5) and (max-width: $break-small-iphone5) {
                     bottom: 20px;
                     left: 20%;
                     font-size: 8.7px;
                 }
-                @media screen and (min-width: $break-small-iphone6) {
+                @media screen and (min-width: $break-small-iphone6) and (max-width: $break-small-iphone6) {
                     bottom: 1%;
                     left: 24%;
                     font-size: 8.7px;
