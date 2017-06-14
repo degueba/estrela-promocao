@@ -16,7 +16,7 @@ Original::loadBlock('topo_home');
                 </div>
                 <div class="col-lg-6">
                     <h1 class="title">prepare as malas e boa diversão!</h1>
-                    <h4 class="subtitle">Na promoção <strong>80 anos</strong> da Estrela comprando a partir <br> de <strong>R$ 80,00</strong> em <strong>brinquedos Estrela</strong> você ganha um <br> Pega-Varetas exclusivo e ainda concorre a uma viagem <br>incrível <strong>Volta ao Mundo</strong>  com tudo pago. <br> <small style="color: #fff;">Consulte o regulamento</small></h4>
+                    <h4 class="subtitle">Na promoção <strong>80 anos</strong> da Estrela comprando a partir <br> de <strong>R$ 80,00</strong> em <strong>brinquedos Estrela</strong> você ganha um <br> <strong>Pega-Varetas exclusivo</strong> e ainda concorre a uma viagem <br>incrível <strong>Volta ao Mundo</strong>  com tudo pago. <br> <small style="color: #fff;">Consulte o regulamento</small></h4>
                     
                     <a href="#como-participar" class="scroll-suave btn btn-default btn-participa">Como participar</a>
                     <a href="#cadastro-ou-login" class="scroll-suave btn btn-default btn-cadastre">Cadastre-se</a>
@@ -376,11 +376,11 @@ Original::loadBlock('topo_home');
                 <!--LOJAS ONLINE-->
                 <div class="col-lg-12">
                     <ul class="lista-lojas lojas-online">
-                        <a href="http://www.estrela.com.br">
                             <li class="box">
+                                <a class="link_estrela" href="http://www.estrela.com.br"></a>
                                 <aside class="left">
                                     <figure>
-                                        <img src="/images/logo_estrela.png" alt="..." >
+                                        <img src="/images/logo_estrela_loja.png"  alt="..." >
                                     </figure>
                                     <h2 class="hidden-xs">Loja da Estrela</h2>
                                 </aside>
@@ -389,7 +389,6 @@ Original::loadBlock('topo_home');
                                     <a  target="_blank" class="btn btn-primary">Entrar</a>
                                 </aside>
                             </li>
-                        </a>
                     </ul>
                 </div>
                 <!--LOJAS FÍSICAS-->

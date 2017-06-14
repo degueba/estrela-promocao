@@ -6,7 +6,7 @@ Original::loadBlock('head');
 
 <body class="container-fluid user-profile">
     <!-- MENU LATERAL MOBILE -->
-    <nav class="hidden-lg nav-lateral-mobile">
+    <nav class="hidden-lg nav-lateral-mobile hidden">
         <!-- La cruz para cerrar el menu lateral -->
         <div class="cruz">
             <!-- Los span van a ser las dos barras de la cruz! -->
@@ -34,6 +34,7 @@ Original::loadBlock('head');
                         <a href="http://voltaaomundo.estrela.com.br/" class="navbar-brand" href="#">
                             <img  alt="Brand" src="images/logo_estrela.png">
                         </a>
+                        <a href="#" class="pull-left texto-promocao-header">Promoção volta ao mundo</a>
                         <!-- HAMBURGUER -->
                     <div class="barra-sup hidden-lg">
                         <div class="hamburguer">
@@ -43,8 +44,8 @@ Original::loadBlock('head');
                         </div>
                     </div>
                     <!---->
-                        <ul class="nav navbar-nav pull-right">
-                            <li class="active title-promocao--volta---mundo"><a href="#" class="pull-left">Promoção volta ao mundo</a> <img class="hidden-xs pull-right" src="images/globo_promocao_volta_ao_mundo.png" width="120"></li>
+                        <ul class="nav navbar-nav pull-right">.
+                            <li class="active title-promocao--volta---mundo"> <img class="hidden-xs pull-right" src="images/globo_promocao_volta_ao_mundo.png" width="120"></li>
                             <li class="hidden-xs"><a href="/deslogar"><i class="fa fa-sign-out"></i> Sair</a></li>
                         </ul>
                     </div>
