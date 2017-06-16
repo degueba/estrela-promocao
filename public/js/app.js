@@ -200,11 +200,11 @@ jQuery(function() {
 
 
     var $doc = $('html, body');
-
+    var SCROLL_PADDING = 100;
     // Scroll Suave
     $('.scroll-suave').click(function() {
         $doc.animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
+            scrollTop: $($.attr(this, 'href')).offset().top - SCROLL_PADDING
         }, 500);
 
         $(".scroll-suave").parent("li.active").each(function() {
@@ -212,6 +212,8 @@ jQuery(function() {
         });
 
         $(this).parent("li").addClass("active");
+
+        SCROLL_PADDING = 0;
 
         return false;
     });

@@ -377,7 +377,7 @@ Original::loadBlock('topo_home');
                 <div class="col-lg-12">
                     <ul class="lista-lojas lojas-online">
                             <li class="box">
-                                <a class="link_estrela" href="http://www.estrela.com.br"></a>
+                                <a class="link_estrela" href="http://www.estrela.com.br" style="z-index: 1000;"></a>
                                 <aside class="left">
                                     <figure>
                                         <img src="/images/logo_estrela_loja.png"  alt="..." >
