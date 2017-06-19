@@ -10,18 +10,18 @@ Original::loadBlock('topo_home');
     <section class="volta--mundo" id="inicio">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-xs-12 hidden-lg  globo-promocao--volta---mundo">
+                <div class="col-lg-6 col-sm-12 col-xs-12 hidden-lg  globo-promocao--volta---mundo">
                     <img src="images/globo_promocao_volta_ao_mundo.png" alt="" class="img-responsive">
                     <small>CERTIFICADO DE AUTORIZAÇÃO CAIXA - Nº 4-1091/2017</small>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-sm-12">
                     <h1 class="title">prepare as malas e boa diversão!</h1>
                     <h4 class="subtitle">Na promoção <strong>80 anos</strong> da Estrela comprando a partir <br> de <strong>R$ 80,00</strong> em <strong>brinquedos Estrela</strong> você ganha um <br> <strong>Pega-Varetas exclusivo</strong> e ainda concorre a uma viagem <br>incrível <strong>Volta ao Mundo</strong>  com tudo pago. <br> <small style="color: #fff;">Consulte o regulamento</small></h4>
                     
                     <a href="#como-participar" class="scroll-suave btn btn-default btn-participa">Como participar</a>
                     <a href="#cadastro-ou-login" class="scroll-suave btn btn-default btn-cadastre">Cadastre-se</a>
                 </div>
-                <div class="col-lg-6 hidden-xs pull-right globo-promocao--volta---mundo">
+                <div class="col-lg-6 col-sm-12 hidden-xs hidden-sm pull-right globo-promocao--volta---mundo">
                     <img src="images/globo_promocao_volta_ao_mundo.png" alt="">
                     <small>CERTIFICADO DE AUTORIZAÇÃO CAIXA - Nº 4-1091/2017</small>
                 </div>
@@ -540,7 +540,7 @@ Original::loadBlock('topo_home');
 
                                     <small>Todos os campos são de preenchimento obrigatório</small>
                                 </div>
-                                <div class="col-lg-6 col-xs-12">
+                                <div class="col-lg-6 col-sm-10 col-xs-12">
                                     <button type="submit" id="cadastrar-usuario" class="btn btn-default btn-cadastrar pull-right">Cadastrar</button>
                             
                                 </div>

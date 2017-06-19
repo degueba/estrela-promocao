@@ -44,7 +44,7 @@ Original::loadBlock('head');
                         </div>
                     </div>
                     <!---->
-                        <ul class="nav navbar-nav pull-right">.
+                        <ul class="nav navbar-nav pull-right hidden-sm">.
                             <li class="active title-promocao--volta---mundo"> <img class="hidden-xs pull-right" src="images/globo_promocao_volta_ao_mundo.png" width="120"></li>
                             <li class="hidden-xs"><a href="/deslogar"><i class="fa fa-sign-out"></i> Sair</a></li>
                         </ul>
@@ -59,7 +59,7 @@ Original::loadBlock('head');
             <div class="alert alert-<?php echo ($container['retorno']['sucesso'] ? 'success' : 'danger')  ?>"><?php echo $container["retorno"]["msg"]; ?></div>
         <?php endif; ?>
         <div class="row ">
-            <div class="col-lg-8 ">
+            <div class="col-lg-8 col-sm-12">
                 <h2 class="text-center title ">
                     <?php
                     
@@ -82,36 +82,36 @@ Original::loadBlock('head');
                     <header>
                         <h3 class="title pull-left ">Cadastrar Nota Fiscal</h3> <small class="pull-right "> <i class="fa fa-warning "></i> Cadastre somente produtos Estrela</small>
                     </header>
-                    <form class="col-lg-12 col-xs-12" method="post" id="form-cadastrar-nota">
+                    <form class="col-lg-12 col-sm-12 col-xs-12" method="post" id="form-cadastrar-nota">
                        
                         <div class="form-group ">
                             <div>
-                                <div class="col-lg-2 col-xs-12">
+                                <div class="col-lg-2 col-sm-2 col-xs-12">
                                     <label for=" ">Dia da compra*</label>
                                     <input type="text" required="required" name="dia" id="dia" class="form-control ">
                                 </div>
-                                <div class="col-lg-2 col-xs-12">
+                                <div class="col-lg-2 col-sm-2 col-xs-12">
                                     <label for=" ">Mês da compra*</label>
                                     <input type="text" required="required" name="mes" id="mes" class="form-control ">
                                 </div>
-                                <div class="col-lg-3 col-xs-12">
+                                <div class="col-lg-3 col-sm-3 col-xs-12">
                                     <label for=" ">Ano da compra*</label>
                                     <input type="text" required="required" name="ano" id="ano" value="<?php echo date('Y'); ?>" class="form-control ">
                                 </div>
                             </div>
-                            <div class="col-lg-5 col-xs-12">
+                            <div class="col-lg-5 col-sm-5 col-xs-12">
                                 <label for=" ">Número da nota fiscal</label>
                                 <input type="text" required name="numero" class="form-control ">
                             </div>
                         </div>
                         <div class="form-group ">
-                            <div class="col-lg-6 col-xs-12">
+                            <div class="col-lg-6 col-sm-6 col-xs-12">
                                 <label for=" ">CNPJ da Loja</label>
                                 <input type="text" required name="cnpj" class="form-control ">
                             </div>
                         </div>
                         <div class="form-group ">
-                            <div class="col-lg-3 col-xs-12">
+                            <div class="col-lg-3 col-sm-3 col-xs-12">
                                 <label for="">Estado da Loja**</label>
                                  <select class="form-control" name="uf" id="slt_estados">
                                         <option value="">Estado</option>
@@ -120,13 +120,13 @@ Original::loadBlock('head');
                                         <?php } ?>
                                 </select>
                             </div>
-                            <div class="col-lg-3 col-xs-12">
+                            <div class="col-lg-3 col-sm-3 col-xs-12">
                                 <label for="">Cidade**</label>
                                 <select class="form-control"  name="cidade" id="slt_cidades">
                                         <option value="" selected>Cidade</option>
                                 </select>
                             </div>
-                            <div class="col-lg-12 col-xs-12">
+                            <div class="col-lg-12 col-sm-12 col-xs-12">
                                 <label for="">Site da Loja ***</label>
                                 <!-- small class="help-msg ">* Somente para compras online</small-->
                                 <div class="input-group">
@@ -137,27 +137,27 @@ Original::loadBlock('head');
                         </div>
                         <div class="form-group">
                             <div class="produto_estrela">
-                                <div class="col-lg-6 nome_produto">
+                                <div class="col-lg-6 col-sm-6 nome_produto">
                                     <label for=" ">Produto Estrela comprado</label>
                                     <input type="text" required name="produto[]"  class="form-control ">
                                 </div>
-                                <div class="col-lg-6 valor_produto">
+                                <div class="col-lg-6 col-sm-6 valor_produto">
                                     <label for="">Valor do produto</label>
                                     <input type="text" required name="valor_produto[]"  class="form-control mask_valor_produto">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-lg-12 col-xs-12">
+                            <div class="col-lg-12 col-sm-12 col-xs-12">
                                 <button type="button" class="btn btn-default btn-add-produto"><i class="fa fa-plus "></i> Adicionar produto estrela</button>
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-lg-8  col-xs-11">
+                            <div class="col-lg-8 col-sm-8 col-xs-11">
                                 <button type="submit" class="pull-right btn btn-cadastrar ">Cadastrar</button>
                             </div>
                             
-                            <div class="col-lg-12">
+                            <div class="col-lg-12 col-sm-12">
                                 <small class="help-msg">* Somente compras realizadas a partir do dia 15/06/2017</small><br>
                                 <small class="help-msg">** Somente para compras realizadas em lojas físicas</small><br>
                                 <small class="help-msg">*** Somente para compras realizadas em lojas online</small>
@@ -184,7 +184,7 @@ Original::loadBlock('head');
                 </div>
             </div>
 
-            <div class="col-lg-4 ">
+            <div class="col-lg-4 col-sm-12">
 
                 <div class="box-user meus-cupons" id="cupons-cadastrados">
                     <header>

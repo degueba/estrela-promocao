@@ -47,11 +47,15 @@ body.user-profile {
         border-radius: 20px;
         background-color: #fff;
         height: auto;
-        min-height: 560px;
+        min-height: 450px;
         margin: 0 0 20px;
         .help-msg {
             font-size: 12px;
             color: #737373;
+        }
+        // tablet
+        @media screen and (max-width: $break-medium) {
+            min-height: 570px;
         }
         header {
             border-bottom: 1px solid #ccc;
@@ -90,14 +94,19 @@ body.user-profile {
                 height: 460px;
                 overflow-y: auto;
                 padding-bottom: 20px;
+                // tablet
+                @media screen and (min-width: $break-medium) and (max-width: $break-medium) {
+                    height: 470px;
+                }
+                // mobile
+                @media screen and (max-width: $break-small) {
+                    height: 360px;
+                }
                 .produto_estrela {
                     width: 100%;
                     @media screen and (max-width: $break-small) {
                         float: left;
                     }
-                }
-                @media screen and (max-width: $break-small) {
-                    height: 330px;
                 }
             }
             .btn-add-produto {
@@ -105,6 +114,9 @@ body.user-profile {
                 margin-top: 20px;
                 @media screen and (max-width: $break-small) {
                     margin-bottom: 20px;
+                }
+                @media screen and (max-width: $break-medium) {
+                    margin-bottom: 10px;
                 }
                 color: #737373;
                 i.fa-plus {
@@ -207,6 +219,13 @@ body.user-profile {
             .content {
                 padding: 20px;
                 font-size: 15px;
+                @media screen and (max-width: $break-small) {
+                    font-size: 15px;
+                }
+                // tablet
+                @media screen and (min-width: $break-medium) and (max-width: $break-medium) {
+                    font-size: 25px;
+                }
                 .lista-editar--perfil {
                     li {
                         color: #878787;

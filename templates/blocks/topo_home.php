@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <!---->
-                    <ul class="nav navbar-nav pull-right hidden-xs">
+                    <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
                         <li><a href="#como-participar" class="scroll-suave">Como participar</a></li>
                         <li><a href="#premios" class="scroll-suave">Prêmios</a></li>
                         <li><a href="#regulamento" class="scroll-suave">Regulamento</a></li>

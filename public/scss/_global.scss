@@ -30,6 +30,9 @@ body {
     @media screen and (max-width: $break-small) {
         overflow-x: hidden;
     }
+    @media screen and (min-width: $break-medium) and (max-width: $break-medium) {
+        text-align: center;
+    }
     // MENU MOBILE
     .barra-sup {
         height: 40px;
@@ -256,6 +259,7 @@ body {
         .globo-promocao--volta---mundo {
             position: relative;
             height: 345px;
+            // Mobile
             @media screen and (max-width: $break-small) {
                 width: 100%;
                 height: 290px;
@@ -264,24 +268,42 @@ body {
                     width: 90%;
                 }
             }
+            // Tablet
+            @media screen and (min-width: $break-medium) and (max-width: $break-medium) {
+                height: 500px;
+                img {
+                    left: 50%;
+                    right: 50%;
+                    margin-left: -250px;
+                }
+            }
             img {
                 position: absolute;
                 top: -70px;
             }
             small {
                 position: absolute;
-                bottom: -54px;
+                bottom: 0;
                 font-size: 10px;
                 left: 90px;
+                // Iphone 5
                 @media screen and (min-width: $break-small-iphone5) and (max-width: $break-small-iphone5) {
                     bottom: 70px;
                     left: 20%;
                     font-size: 8.7px;
                 }
+                // iphone 6
                 @media screen and (min-width: $break-small-iphone6) and (max-width: $break-small-iphone6) {
                     bottom: 1%;
                     left: 24%;
                     font-size: 8.7px;
+                }
+                // Tablet
+                @media screen and (min-width: $break-medium) and (max-width: $break-medium) {
+                    left: 50%;
+                    right: 50%;
+                    margin-left: -123px;
+                    width: 250px;
                 }
             }
         }
@@ -318,6 +340,9 @@ body {
                 @media screen and (max-width: $break-small) {
                     margin: 15px;
                 }
+                @media screen and (min-width: $break-medium) and (max-width: $break-medium) {
+                    margin: 7px;
+                }
                 i.icon-estrela {
                     width: 220px;
                     height: 220px;
@@ -345,6 +370,11 @@ body {
                             transform: rotate(90deg);
                         }
                     }
+                    // tablet
+                    @media screen and (min-width: $break-medium) and (max-width: $break-medium) {
+                        width: 170px;
+                        height: 170px;
+                    }
                     &.icon-presente,
                     &.icon-compra,
                     &.icon-nota,
@@ -361,11 +391,19 @@ body {
                         @media screen and (max-width: $break-small) {
                             background-position: -19px -3px;
                         }
+                        // tablet
+                        @media screen and (min-width: $break-medium) and (max-width: $break-medium) {
+                            background-position: -19px 8px;
+                        }
                     }
                     &.icon-compra {
                         background-position: -196px 29px;
                         @media screen and (max-width: $break-small) {
                             background-position: -148px -3px;
+                        }
+                        // tablet
+                        @media screen and (min-width: $break-medium) and (max-width: $break-medium) {
+                            background-position: -224px 5px;
                         }
                     }
                     &.icon-nota {
@@ -373,11 +411,19 @@ body {
                         @media screen and (max-width: $break-small) {
                             background-position: -289px 1px;
                         }
+                        // tablet
+                        @media screen and (min-width: $break-medium) and (max-width: $break-medium) {
+                            background-position: -423px 11px;
+                        }
                     }
                     &.icon-viagem {
                         background-position: -580px 44px;
                         @media screen and (max-width: $break-small) {
                             background-position: -405px 9px;
+                        }
+                        // tablet
+                        @media screen and (min-width: $break-medium) and (max-width: $break-medium) {
+                            background-position: -603px 19px;
                         }
                     }
                 }
@@ -419,6 +465,10 @@ body {
         @media screen and (max-width: $break-small) {
             text-align: center;
         }
+        // tablet
+        @media screen and (min-width: $break-medium) and (max-width: $break-medium) {
+            padding: 60px 0 653px 0;
+        }
         .graf-color {
             position: absolute;
             z-index: 2;
@@ -440,6 +490,10 @@ body {
                 right: 10px;
                 bottom: 0;
                 width: 70%;
+            }
+            // tablet
+            @media screen and (min-width: $break-medium) and (max-width: $break-medium) {
+                right: 0;
             }
         }
         .bg-premios {
@@ -629,6 +683,10 @@ body {
                     @media screen and (max-width: $break-small) {
                         width: 40%;
                     }
+                    // tablet
+                    @media screen and (min-width: $break-medium) and (max-width: $break-medium) {
+                        width: 65%;
+                    }
                     figure {
                         padding: 25px;
                         float: left;
@@ -647,6 +705,10 @@ body {
                     @media screen and (max-width: $break-small) {
                         width: 50%;
                         padding-top: 10px;
+                    }
+                    // tablet
+                    @media screen and (min-width: $break-medium) and (max-width: $break-medium) {
+                        width: 25%;
                     }
                     a {
                         background-color: unset;
@@ -779,6 +841,10 @@ body {
                     @media screen and (max-width: $break-small) {
                         margin-right: 5px;
                     }
+                    // tablet
+                    @media screen and (min-width: $break-medium) and (max-width: $break-medium) {
+                        width: 48%;
+                    }
                     &:last-child {
                         margin-right: 0;
                     }
@@ -821,6 +887,11 @@ body {
                 @media screen and (max-width: $break-small) {
                     min-height: 990px;
                     padding: 10px;
+                }
+                // tablet
+                @media screen and (min-width: $break-medium) and (max-width: $break-medium) {
+                    max-height: 910px;
+                    height: 910px;
                 }
                 form {
                     color: #fff;
