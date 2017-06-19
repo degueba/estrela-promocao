@@ -35,7 +35,7 @@ function validandoData(dia, mes, ano) {
     var dataInput = new Date(ano + "-" + mes + "-" + dia + " 00:00:00").getTime();
 
     if (dataInput < dataInicio) {
-        alert("Data inválida \n O sorteio começará no dia 15/06.");
+        alert("A promoção aceita apenas produtos comprados a partir do dia 16 de junho de 2017.");
 
 
         return false;
