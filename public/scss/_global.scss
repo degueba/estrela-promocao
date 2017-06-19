@@ -286,14 +286,30 @@ body {
                 bottom: -52px;
                 font-size: 10px;
                 left: 90px;
+                // nexus 
+                @media screen and (min-width: $break-small-nexus) and (max-width: $break-small-nexus) {
+                    bottom: 6px;
+                    left: 86px;
+                }
+                // Galaxy 
+                @media screen and (min-width: $break-small-galaxy) and (max-width: $break-small-galaxy) {
+                    bottom: 27px;
+                    left: 63px;
+                }
                 // Iphone 5
                 @media screen and (min-width: $break-small-iphone5) and (max-width: $break-small-iphone5) {
-                    bottom: 0;
+                    bottom: 60px;
                     left: 20%;
                     font-size: 8.7px;
                 }
                 // iphone 6
                 @media screen and (min-width: $break-small-iphone6) and (max-width: $break-small-iphone6) {
+                    bottom: 0;
+                    left: 24%;
+                    font-size: 8.7px;
+                }
+                // Iphone 6 plus
+                @media screen and (min-width: $break-small-iphone6plus) and (max-width: $break-small-iphone6plus) {
                     bottom: 0;
                     left: 24%;
                     font-size: 8.7px;
