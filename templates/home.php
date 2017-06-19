@@ -38,7 +38,7 @@ Original::loadBlock('topo_home');
                         <li><i class="icon-estrela icon-presente"></i><span>Compre brinquedos Estrela nas lojas participantes</span></li>
                         <li><i class="icon-estrela icon-compra"></i><span>A cada R$80 em compras de produtos Estrela, você ganha um pega varetas e um número da sorte</span></li>
                         <li><i class="icon-estrela icon-nota"></i><span>Preencha os campos do formulário de cadastro aqui no site da promoção</span></li>
-                        <li><i class="icon-estrela icon-viagem"></i><span>Comece a torcida! <br>O resultado será divulgado dia<br> 16 de agosto</span></li>
+                        <li><i class="icon-estrela icon-viagem"></i><span>Comece a torcida! <br>O resultado será divulgado dia<br> 21 de agosto</span></li>
                     </ul>
                 </div>
             </div>
@@ -459,7 +459,7 @@ Original::loadBlock('topo_home');
                         Cadastre-se até o dia 30 de julho
                     </p>
 
-                    <small class="text-center msg-dia-sorteio">O sorteio acontecerá no dia <strong> 21/08/2017 às 19:15 </strong> (horário de Brasília).</small>
+                    <small class="text-center msg-dia-sorteio">O sorteio acontecerá no dia <strong> 16/08/2017 às 19:15 </strong> (horário de Brasília).</small>
                 </div>
 
             </div>
