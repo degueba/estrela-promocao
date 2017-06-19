@@ -67,7 +67,7 @@ Original::loadBlock('topo_home');
     <section class="regulamento" id="regulamento">
         <div class="container">
             <div class="row">
-                <h1 class="title  text-center">Regulamento</h1>
+                <h1 class="title  text-center">Regulamentos</h1>
                 <div class="col-lg-12">
                     <div class="texto-regulamento">
                         <div>
@@ -459,7 +459,7 @@ Original::loadBlock('topo_home');
                         Cadastre-se até o dia 30 de julho
                     </p>
 
-                    <small class="text-center msg-dia-sorteio">O sorteio acontecerá no dia <strong> 16/08/2017 às 19:15 </strong> (horário de Brasília).</small>
+                    <small class="text-center msg-dia-sorteio">O sorteio acontecerá no dia <strong> 21/08/2017 às 19:15 </strong> (horário de Brasília).</small>
                 </div>
 
             </div>
