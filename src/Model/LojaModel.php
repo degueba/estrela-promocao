@@ -12,7 +12,9 @@ class LojaModel extends BaseModel {
                 loja.nome,
                 loja.cnpj,
                 loja.uf,
-                loja.cidade
+                loja.cidade,
+                loja.endereco,
+                loja.endereco_numero
                 FROM
                 loja
                 WHERE 1=1";
